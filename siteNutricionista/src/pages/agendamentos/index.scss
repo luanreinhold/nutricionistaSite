@@ -1,0 +1,262 @@
+.Page_Agendamento {
+
+    .indice {
+        background-color: #FAB5B4;
+        height: 100%;
+        width: 25%;
+        align-items: center;
+    }
+    
+    .editando {
+        width: 60%;
+        height: 100vh;
+        padding: 3em;
+    }
+    
+    .pagina {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .Menu {
+        margin-top: 3.5em;
+        padding: 10px 20px;
+        background-color: #ffff;
+        border-radius: 20px;
+        font-size: 14px;
+        width: 12em;
+        color: #000;
+    }
+    
+    .titulos {
+        margin-left: 0px;
+        
+    }
+    
+    h3 {
+        font-weight: 900;
+    }
+    
+    
+    h1 {
+        margin-top: 1em;
+    }
+    
+    h2{
+        width: 15em;
+        margin-top: 1em;
+    }
+    h3 {
+        width: 9em;
+        margin-top: 2.5em;
+    }
+    
+    
+    .fileira1 {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nome{
+        width: 400px;
+        height: 25px;
+        margin-left: 0px;
+        background-color: #dcdcdc;
+        border: none;
+    }
+    
+    .ficha{
+        width: 148px;
+        height: 25px;
+        margin-left: 5em;
+        background-color: #dbdbdb;
+        border: none;
+    
+    }
+    
+    .dt-conf {
+        width: 148px;
+        height: 25px;
+        background-color: #dcdcdc;
+        border: none;
+    
+    }
+    
+    .genero-CPF {
+        width: 148px;
+        height: 25px;
+        margin-left: 6.4em;
+        background-color: #dcdcdc;
+        border: none;
+    
+    }
+    
+    
+    
+    .obs{
+        
+       width: 625px;
+        height: 100px;
+        background-color: #dcdcdc;
+        border: none;
+    }
+    
+    .hora {
+       
+            width: 120px;
+            height: 25px;
+            margin-left: 2em;
+            background-color: #dbdbdb;
+            border: none;
+        }
+    
+    .pag-valor{
+    
+            width: 138px;
+            height: 25px;
+    
+            margin-left: 2em;
+            background-color: #dbdbdb;
+            border: none;
+        }
+    
+    .desc1 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 15px;
+    }
+    
+    .desc2 {
+        margin-left: 4.3em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 15px;
+    }
+    
+    .desc3 {
+        margin-left: 5.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 15px;
+    }
+    .desc4 {
+        margin-left: 1.7em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 15px;
+    }
+    
+    .salvar{
+            padding: 10px 20px;
+            color: #000;
+            background-color: #FAB5B4;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 0em;
+            width: 10em;
+            height: 2.5em;
+            justify-self: flex-end !important;
+            align-self: flex-end;
+            margin-right: 20%;
+    }
+    
+    
+    /* bia add */
+    
+    .user {
+        padding: 5px 10px 5px 10px;
+        height: 3em;
+        border: none;
+        border-radius: 0px 0px 10px 10px;
+        background-color: #FAB5B4;
+    }
+    
+    .Menu:hover {
+        color: #d64d4d;
+        background-color: #bebebe;
+    }
+    
+    .profile {
+        width: 20px;
+        margin-right: 5px;
+        height: 20px;
+    }
+    
+    h1 {
+        margin: 0px !important;
+    }
+    
+    .save-img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .home-img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .fb {
+        display: flex;
+    }
+    
+    .align-center {
+        align-items: center;
+    }
+    
+    .jc-center {
+        justify-content: center;
+    }
+    
+    .fb-column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fb-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .faixa {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .titulo {
+        font-family: 'Poppins-Bold';
+        font-size: 22px;
+        color: #01923F;
+    }
+    
+    .subtitulo {
+        font-family: 'Poppins-Medium';
+        font-size: 16px;
+        color: #01923F;
+    }
+    
+    .tag-input {
+        height: 1.5em;
+        width: 100%;
+        border: none;
+        background-color: #DCDCDC;
+    }
+    
+    .texto {
+        font-family: 'Roboto-Light';
+        font-size: 15px;
+    }
+    
+     a:link, a:active, a:visited {
+        padding: 5px 20px;
+        text-decoration: none;
+        font-family: 'Roboto-Light';
+        text-align: center;
+        margin-top: 2em;
+    }
+
+}

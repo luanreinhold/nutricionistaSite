@@ -1,0 +1,474 @@
+.Page-Home {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 4.5em;
+        padding: 0.5em 1em;
+        background-color: #2BC8A2;
+        opacity: 95%;
+    }
+    
+    .sloogan {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+        color: #fff;
+        font-weight: 400;
+    
+    }
+    
+    .logo {
+        width: 4em;
+        height: 4em;
+    }
+    
+    .login {
+        color: #000;
+        margin: 0px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        height: 2em;
+        width: 5em;
+        border-radius: 1em;
+        background-color: white;
+        text-align: center;
+    }
+    
+    .login:hover {
+        color: #E89897;
+    }
+    
+    .flexboxrow {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .flexboxcolumn {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /*
+    inicio faixa 1
+    */
+    .f1  {
+        height: 100vh !important;
+        align-items: center;
+        justify-content: center;
+        height: 75vh;
+        margin-top: 0px;
+        // background-image: url(../assets/images/nutricao.png);
+        // background-repeat: no-repeat;
+        // background-size: 13em;
+        // background-position-x: 86em;
+        // background-position-y: 15em;
+    }
+    
+    .f1-texto > p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2em;
+        width: 28em;
+    }
+    
+    .f1-prosa {
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+        width: 8em;
+        padding-bottom: 0.5em;
+    }
+    .f1-doutora {
+        width: 24em;
+        margin-right: 10em;
+    }
+    /*
+    fim faixa 1
+    */
+    
+    /*
+    inicio faixa dois
+    */
+    .f2 {
+        padding-top: 5em;
+        padding-bottom: 3em;
+        justify-content: space-around;
+        height: 70vh;
+        background-color: #FFF8F6;
+    }
+    
+    .f2-texto > p {
+        line-height: 1.3em;
+        width: 29em;
+        margin-top: 1em;
+    }
+    
+    .f2-titulo {
+        margin-bottom: 15px;
+    }
+    
+    .hr {
+        border-top: 3px solid #E89897;
+        border-radius: 2px;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    /*
+    https://www.w3schools.com/howto/howto_css_style_hr.asp
+    referencia que eu usei para fazer essa linha
+    */
+    
+    .f2-img {
+        width: 30em;
+        height: 32em;
+        border-radius: 1em;
+    }
+    
+    .f3 {
+        height: 100vh !important;
+        background-color: #E89897;
+    }
+    
+    .hrf3 {
+        border-top: 3px solid #fff !important;
+        border-radius: 2px;
+        margin-top: 2em;
+        margin-bottom: 5em;
+        width: 50%;
+    }
+    
+    .sub1-f3 {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+    .sub1-f3-textos {
+        margin: 0px 2em;
+        width: 50%;
+        height: 100%;
+        justify-content: space-between;
+    }
+    
+    .cor-f3 {
+        color: #fff !important;
+    }
+    
+    .cor-texto-f3 {
+        color: #fff !important;
+    }
+    
+    
+    
+    .f4 {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        background-color: #FFDED9;
+    }
+    
+    .f4-container > div {
+        background-color: #E89F95;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1em;
+        padding: 18px 10px;
+        text-align: center;
+        box-shadow: 10px 10px 20px rgb(77, 75, 75);
+    }
+    
+    .f4-container {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .f4-bloco1 {
+        text-align: left;
+        height: 10em;
+        width: 23em;
+        border-radius: 2em;
+    }
+    
+    .f4-bloco2 {
+        text-align:left;
+        height: 10em;
+        width: 23em;
+        border-radius: 2em;
+    }
+    
+    .f4-imagem {
+        width: 100%;
+        height: 5em;
+    }
+    
+    .f4-titulo {
+        color:#000 !important;
+        text-align: center;
+        font-size: 1.5em;
+        padding-top: 1em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+    
+    .f4-linha {
+        border-top: 3px solid #0a0a0a;
+    }
+    
+    .f6-titulo {
+        color: #7BC56F !important;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    
+    .subsub-f6 {
+        justify-content: space-around;
+    }
+    
+    .f6 {
+        width: 100%;
+        height: 120vh;
+    }
+    
+    .f6-texto {
+        background-color: #C5F4BD;
+        text-align: center;
+        border-radius: 1em;
+        margin-right: 6em;
+        padding: 2em;
+        height: 20em;
+        width: 30em;
+        justify-content: space-around;
+    }
+    
+    .f6 p {
+        color: #3C4941 !important;
+        text-align: left;
+    }
+    
+    .f6-img {
+        height: 20em;
+        width: 30em;
+        border-radius: 1em;
+    }
+    
+    .f7 {
+        align-items: center;
+        justify-content: center;
+        height: 15vh;
+        font-family: 'Roboto', sans-serif;
+        color:#ffffff !important;
+        background-color: #D6B6B1;
+    }
+    
+    .f7 p {
+        margin: 0px 10px;
+    }
+    
+    .footer-icons > img {
+        height: 3.5em;
+        width: 3.5em;
+    }
+    
+    footer {
+        height: 28vh;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: roboto2;
+        background-color: #2BC8A2;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        height: 5em;
+        width: 5em;
+    }
+    
+
+
+
+    .fb {
+        display: flex;
+    }
+    
+    .align-center {
+        align-items: center;
+    }
+    
+    .jc-center {
+        justify-content: center;
+    }
+    
+    .fb-column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fb-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .faixa {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .titulo {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        color: #01923F;
+    }
+    
+    .subtitulo {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #01923F;
+    }
+    
+    .tag-input {
+        height: 1.5em;
+        width: 100%;
+        border: none;
+        background-color: #DCDCDC;
+    }
+    
+    .texto {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+    
+     a:link, a:active, a:visited {
+        padding: 5px 20px;
+        text-decoration: none;
+        font-family: 'Roboto-Light';
+        text-align: center;
+        margin-top: 2em;
+    }
+
+
+
+
+
+
+
+
+
+    /* correções */
+    
+    
+    .titulo-home {
+        font-family: 'Poppins-Bold';
+        font-size: 36px;
+        color: #E89897;
+    }
+    
+    .f1 h1 {
+        width: 15em !important;
+    }
+    
+    .subtitulo-home {
+        font-family: 'Poppins-Medium';
+        font-size: 22px;
+    }
+    
+    .texto-home {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+    
+    .sub1-f3 div {
+        width: 20em;
+        height: 100%;
+    }
+    
+    .sub1-f3 p {
+        width: 22em;
+    }
+    
+    .f2-texto p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2em;
+        width: 28em;
+    }
+    
+    /* responsividade !! */
+    
+    @media (max-width:800px) {
+    
+    
+    
+    
+        .titulo-home {
+            font-size: 16px;
+            text-align: center;
+            padding: 0px;
+            justify-self: center;
+            margin-bottom: 1em;
+        }
+        .subtitulo-home {
+            font-size: 14px;
+            text-align: center;
+            padding: 0px !important;
+            align-self: center;
+            
+        }
+        .texto-home {
+            font-size: 12px !important;
+            text-align: center;
+            padding: 0px;
+        }
+    
+        .header {
+            height: 10%;
+        }
+        .logo {
+            width: 3em;
+            height: 3em;
+        }
+    
+    
+        .f1 {
+            flex-direction: column;
+        }
+        .f1-doutora {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        .responsividade {
+            height:45%;
+            width: 38%;
+        }
+        .f1-texto {
+            text-align: center;
+        }
+        .f1-prosa {
+            padding: 0px;
+        }
+    
+        .f1 h1 {
+            text-align: center;
+        }
+    
+        .f1-texto h2 {
+            font-family: 'Poppins-Medium';
+            color: #E89F95;
+        }
+    
+    }
+
+}

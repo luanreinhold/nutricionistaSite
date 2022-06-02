@@ -1,0 +1,139 @@
+.Page-Login {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+    
+
+a {
+    border-radius: 20px;
+}
+
+.faixa1 {
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.faixa1 a {
+    color: #fff;
+}
+
+.imagem-f1 {
+    width: 50%;
+    height: 100%;
+}
+
+.voltar {
+    color: #000 !important;
+    padding: 0px !important;
+    margin: 10px !important;
+    text-decoration: underline !important;
+    font-family: 'Poppins-Medium'!important;
+    font-size: 10px;
+}
+
+.botao {
+    background-color: #E89897;
+}
+
+.botao:hover {
+    background-color: #e48d8c;
+}
+
+.sub-f1 {
+    background-color: #fff;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-f1 div {
+    width: 50%
+}
+
+
+
+.fb {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.fb-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.fb-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.faixa {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.titulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #01923F;
+}
+
+.subtitulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #01923F;
+}
+
+.tag-input {
+    height: 1.5em;
+    width: 100%;
+    border: none;
+    background-color: #DCDCDC;
+}
+
+.texto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+ a:link, a:active, a:visited {
+    padding: 5px 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+
+
+
+
+
+@media (max-width:900px){
+    .imagem-f1 {
+     display: none;   
+    }
+
+    .faixa1 {
+        background-image: url(../../assets/images/ffe3e452b6c0023c81707eba9375c69e.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sub-f1 {
+        width: 65%;
+        border-radius: 3em;
+        height: 50%;
+    }
+
+}
+    
+}

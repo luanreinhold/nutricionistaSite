@@ -1,0 +1,227 @@
+.Page-Admin {
+
+
+    .indice {
+        background-color: #FAB5B4;
+        height: 100%;
+        width: 25%;
+        align-items: center;
+        padding: 2em 0em 2em 0em;
+    }
+    
+    
+    .admin {
+        border-spacing: 0px 10px;
+    }
+    
+    .menu-titulo {
+        font-family: 'Poppins-Bold';
+        font-size: 22px;
+        color: #fff;
+    }
+    
+    .sub1-f2 {
+        width: 60%;
+        padding-top: 2em;
+        padding-left: 5em;
+    }
+    
+    .margem {
+        padding-bottom: 10px;
+        justify-content: space-between !important;
+    }
+    
+    .botao-f2  {
+        height: 2em;
+        background-color: #fff;
+        color: #000;
+        padding: 0.5em 0px;
+        align-items: center;
+        font-family: 'Poppins-Medium' !important;
+        width: 80%;
+        border-radius: 0px 20px 20px 0px;
+        align-self: flex-start;
+    }
+    
+    .botao-f2:hover {
+        background-color: #ebe8e8;
+        color: #f89f9e;
+    }
+    
+    .agendamento {
+        background-color: #ffffff;
+        width: 95%;
+        border-spacing: 0px 10px;
+        margin: 0px !important;
+    }
+    
+    .logout {
+        padding: 5px 10px 5px 10px;
+        height: 4em;
+        border: none;
+        border-radius: 0px 0px 10px 10px;
+        background-color: #FAB5B4;
+        text-align: center;
+    }
+    
+    .logout a {
+     text-decoration: underline !important;
+        font-size: 10px;
+        color: rgb(255, 0, 0);
+        font-family: 'Roboto-Light';
+    }
+    
+    .profile {
+        width: 20px;
+        margin-right: 5px;
+        height: 20px;
+    }
+    
+    .botao-admin {
+        font-family: 'Roboto-Light';
+        width: 3em;
+    }
+    
+    .botao-admin img {
+        width: 80%;
+    }
+    
+    .margem {
+        width: 90%;
+        height: 80%;
+        margin-top: 2em;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: -3px 3px 5px 0px rgb(68, 67, 67);
+    }
+    
+    .margem * {
+        margin: 0px 2%;
+    }
+    
+    table {
+        border: none;
+        width: 95%;
+    }
+    
+    td {
+        text-align: center;
+        color: inherit;
+        margin: 0px;
+        padding: 0px;
+        line-height: 1.5em;
+        width: 15%;
+        font-family: 'Roboto-Light';
+        background-color: #DCDCDC;
+        font-size: 12px;
+    }
+    
+    
+    .cabecalho td {
+        background-color: #C5F4BD;
+        font-family: 'Roboto-Light';
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 12px;
+        font-family: 'Roboto-Light';
+    }
+    
+    .novo-agendamento {
+        width: 5em;
+        font-size: 12px;
+        padding: 5px 0px !important;
+        color: #01923F;
+        background-color: #C5F4BD;
+        border-radius: 1em;
+        height: 2em;
+    }
+    
+    .novo-agendamento:hover {
+        width: 6em;
+        height: 2.2em;
+    }
+    
+    .novo-agendamento img {
+        width: 1em;
+        height: 1em;
+    }
+    
+    .delete-edit {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+    
+    .img-delete-edit {
+        width: 15px;
+        height: 15px;
+    }
+
+
+
+
+    .fb {
+        display: flex;
+    }
+    
+    .align-center {
+        align-items: center;
+    }
+    
+    .jc-center {
+        justify-content: center;
+    }
+    
+    .fb-column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fb-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .faixa {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .titulo {
+        font-family: 'Poppins-Bold';
+        font-size: 22px;
+        color: #01923F;
+    }
+    
+    .subtitulo {
+        font-family: 'Poppins-Medium';
+        font-size: 16px;
+        color: #01923F;
+    }
+    
+    .tag-input {
+        height: 1.5em;
+        width: 100%;
+        border: none;
+        background-color: #DCDCDC;
+    }
+    
+    .texto {
+        font-family: 'Roboto-Light';
+        font-size: 15px;
+    }
+    
+     a:link, a:active, a:visited {
+        
+        text-decoration: none;
+        font-family: 'Roboto-Light';
+        text-align: center;
+    }
+
+
+
+}
