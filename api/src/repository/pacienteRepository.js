@@ -34,3 +34,17 @@ WHERE 	NM_PACIENTE			like ?`;
     const [linhas] = await con.query (comando, [`%${nome}%`]);
     return linhas
 }
+
+export async function consultarData (data) {
+    const comando =
+    `   SELECT	DT_AGENDAMENTO			NOME,
+        DS_CPF					        CPF,
+        DT_AGENDAMENTO			        AGENDAMENTO,
+        DT_CONSULTA			 	        DATAEHORA,
+        VL_VALORTOTAL		 	        TOTAL,
+        ID_AGENDAMENTO		 	        FICHA
+   FROM TB_AGENDAMENTO
+  WHERE DT_AGENDAMENTO = ?`;
+    const [linhas] = await con.query(comando, [data]);
+    return linhas;
+}

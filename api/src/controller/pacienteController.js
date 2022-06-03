@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { consultarnNomeAgendamento, criarTabela, deletarAgendamento } from '../repository/pacienteRepository.js';
+import { consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento } from '../repository/pacienteRepository.js';
 
 const server = Router();
 
@@ -51,11 +51,23 @@ server.get('/agendamento/:nome', async (req,resp) => {
             erro: err.message
         })
     }
-        
+})
+
+server.get('/agendamentondata/:data', async (req, resp) => {
+
+    try{
+        const { data } = req.params;
+        const z = await consultarData(data)
+        resp.send(z)
+
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
 
 
 })
-
 
 
 

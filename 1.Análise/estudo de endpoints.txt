@@ -63,3 +63,11 @@ resp
 {
     [nome]
 }
+
+
+5) pesquisar agendamento por data /get '/agendamentondata/:data'
+resp
+{
+    [nome]
+}
+
