@@ -23,9 +23,6 @@ DELETE FROM TB_AGENDAMENTO
       WHERE ID_AGENDAMENTO = 1;
 
 
-
-
-
 -- Alterar Agendamento
 UPDATE TB_AGENDAMENTO 
    SET NM_PACIENTE      = 'Bianca Liebetanz',
@@ -39,7 +36,6 @@ UPDATE TB_AGENDAMENTO
        VL_VALORTOTAL	= 100.00,
        BT_COMPARECEU = true
  WHERE ID_AGENDAMENTO = 1;
-
 
 
  -- consultar todos os agendamentos     
