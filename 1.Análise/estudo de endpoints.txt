@@ -1,0 +1,19 @@
+INSERT INTO TB_AGENDAMENTO (ID_USUARIO, NM_PACIENTE, DS_TELEFONE, DT_NASCIMENTO, DS_GENERO, DS_CPF, DS_OBSERVACAO, DT_CONSULTA, DS_PAGAMENTO, VL_VALORTOTAL, BT_COMPARECEU)
+VALUES(1,'Bianca Liebetanz', '11 94138-1404', '2006-04-14', 'Feminino', '484.491.39805', 'Inteligentíssima, inimiga do Reinhold', '2022-08-23 12:30:00', 'Dinheiro', 100.00, true);
+
+Inserir Filme   post
+
+req
+{       
+    paciente.ID_USUARIO
+    paciente.NM_PACIENTE
+    paciente.DS_TELEFONE
+    paciente.DT_NASCIMENTO
+    paciente.GENERO
+    paciente.CPF
+    paciente.OBSERVACAO
+    paciente.DT_CONSULTA
+    paciente.DS_PAGAMENTO
+    paciente.VL_VALORTOTAL
+    paciente.BT_COMPARECEU
+}
