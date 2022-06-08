@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento } from '../repository/pacienteRepository.js';
+import { consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento } from '../repository/pacienteRepository.js';
 
 const server = Router();
 
@@ -66,9 +66,24 @@ server.get('/agendamentondata/:data', async (req, resp) => {
         })
     }
 
-
 })
 
+server.put('/agendamento/:id', async (req,resp) => {
+
+    try{
+        const { id } = req.params;
+        const paciente = req.body;
+        
+        const resposta = await editarAgendamento(id, paciente);
+        resp.status(202).send();
+
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+
+}) 
 
 
 export default server

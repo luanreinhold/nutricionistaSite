@@ -48,3 +48,22 @@ export async function consultarData (data) {
     const [linhas] = await con.query(comando, [data]);
     return linhas;
 }
+
+export async function editarAgendamento (id, paciente) {
+    const comando =
+    `UPDATE TB_AGENDAMENTO 
+    SET NM_PACIENTE             = ?,
+        DS_TELEFONE             = ?,
+        DT_NASCIMENTO           = ?,
+        DS_GENERO		        = ?,
+        DS_CPF		        	= ?,
+        DS_OBSERVACAO	        = ?,
+        DT_CONSULTA	            = ?,
+        DS_PAGAMENTO		    = ?,
+        VL_VALORTOTAL	        = ?,
+        BT_COMPARECEU           = ?
+  WHERE ID_AGENDAMENTO = ?`;
+
+  const [resposta] = await con.query (comando, [paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.pagamento, paciente.valortotal, paciente.compareceu, id]);
+  return resposta.affectedRows;
+}
