@@ -59,7 +59,7 @@ FROM 	TB_AGENDAMENTO
 WHERE 	NM_PACIENTE			like '%a%';
         
 
--- Pesquisar por DATA
+-- Pesquisar por ID
 SELECT	DT_AGENDAMENTO		=	NOME,
 		DS_CPF				=	CPF,
 		DT_AGENDAMENTO		=	AGENDAMENTO,
@@ -67,7 +67,9 @@ SELECT	DT_AGENDAMENTO		=	NOME,
 		VL_VALORTOTAL		= 	TOTAL,
         ID_AGENDAMENTO		= 	FICHA
         FROM TB_AGENDAMENTO
-		WHERE DT_AGENDAMENTO ='2022-03-11-12:00:00';
+		WHERE ID_AGENDAMENTO = 1;
+        
+        
         
         
         

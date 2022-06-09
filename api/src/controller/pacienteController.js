@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento } from '../repository/pacienteRepository.js';
+import { BuscarPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento } from '../repository/pacienteRepository.js';
 
 const server = Router();
 
@@ -84,6 +84,44 @@ server.put('/agendamento/:id', async (req,resp) => {
     }
 
 }) 
+
+server.get('/paciente/busca', async (req, resp) => {
+    try {
+        const{ nome }= req.query;
+        const resposta= await BuscarPorNome(nome);
+        
+        if(resposta.length == 0)
+        throw new Error("Paciente não encontrado");
+        
+        resp.send(resposta);
+        
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+        
+    }
+})
+
+
+server.get('/paciente/:id', async(req, resp) => {
+    try {
+        const{id}= req.params;
+        const resposta= await BuscarPorId(Number(id));
+        
+        if(!resposta)
+        throw new Error("Paciente não encontrado");
+        
+        resp.send(resposta);
+        
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+        
+    }
+})
+
 
 
 export default server

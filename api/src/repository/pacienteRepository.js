@@ -67,3 +67,33 @@ export async function editarAgendamento (id, paciente) {
   const [resposta] = await con.query (comando, [paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.pagamento, paciente.valortotal, paciente.compareceu, id]);
   return resposta.affectedRows;
 }
+
+export async function BuscarPorId(id) {
+    const comando=
+    `SELECT	DT_AGENDAMENTO		=	NOME,
+    DS_CPF				        =	CPF,
+    DT_AGENDAMENTO		        =	AGENDAMENTO,
+    DT_CONSULTA			        = 	DATAEHORA,
+    VL_VALORTOTAL		        = 	TOTAL,
+    ID_AGENDAMENTO		        = 	FICHA
+    FROM TB_AGENDAMENTO
+    WHERE ID_AGENDAMENTO = ? `;
+   
+    const[linhas]= await con.query(comando, [id]);
+    return linhas[0];
+}
+
+export async function BuscarPorNome(nome) {
+    const comando=
+    `SELECT NM_PACIENTE		= NOME,
+            DS_CPF			= CPF,
+            DT_CONSULTA		= DATAEHORA,
+            VL_VALORTOTAL	= TOTAL,
+            ID_AGENDAMENTO	= FICHA
+    FROM 	TB_AGENDAMENTO
+    WHERE 	NM_PACIENTE			like ?`;
+   
+    const[linhas]= await con.query(comando, [`%${nome}%`]);
+    return linhas;
+}
+
