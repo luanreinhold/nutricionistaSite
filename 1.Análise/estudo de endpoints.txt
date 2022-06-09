@@ -71,3 +71,26 @@ resp
     [nome]
 }
 
+
+6) pesquisar por data  /GET  '/agendamento/busca?data=xxxx-xx-xx
+response
+[   
+    {
+        "nome": "",
+        "cpf":"",
+        "dataAgendada": "2020-10-00",
+        "horario": "",
+        "numeroFicha": 0
+    }
+]
+
+(7) /GET            /filme/:id
+response
+   
+    {
+        "nome": "",
+        "cpf":"",
+        "dataAgendada": "2020-10-00",
+        "horario": "",
+        "numeroFicha": 0
+    }
