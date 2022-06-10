@@ -2,15 +2,15 @@
 
 req
 {
-    email 
-    senha
+    "email" 
+    "senha"
 }
 
 resp
 {
-    email
-    nome
-    id
+    "email"
+    "nome"
+    "id"
 }
 
 
@@ -19,39 +19,38 @@ resp
 
 req
 {       
-    paciente.IDUSUARIO
-    paciente.PACIENTE
-    paciente.TELEFONE
-    paciente.NASCIMENTO
-    paciente.GENERO
-    paciente.CPF
-    paciente.OBSERVACAO
-    paciente.CONSULTA
-    paciente.PAGAMENTO
-    paciente.VALORTOTAL
-    paciente.COMPARECEU
+    "idusuario"
+    "paciente"
+    "TELEFONE"
+    "NASCIMENTO"
+    "GENERO"
+    "CPF"
+    "OBSERVACAO"
+    "CONSULTA"
+    "PAGAMENTO"
+    "VALORTOTAL"
+    "COMPARECEU"
 }
 
 resp
 {
-    paciente.IDUSUARIO
-    paciente.PACIENTE
-    paciente.TELEFONE
-    paciente.NASCIMENTO
-    paciente.GENERO
-    paciente.CPF
-    paciente.OBSERVACAO
-    paciente.CONSULTA
-    paciente.PAGAMENTO
-    paciente.VALORTOTAL
-    paciente.COMPARECEU
-    id.agendamento
+    "idusuario"
+    "paciente"
+    "TELEFONE"
+    "NASCIMENTO"
+    "GENERO"
+    "CPF"
+    "OBSERVACAO"
+    "CONSULTA"
+    "PAGAMENTO"
+    "VALORTOTAL"
+    "COMPARECEU"
 }
 
 3) excluir agendamento /delete '/agendamento/:id'
 
 req {
-    id
+    "id"
 }
 
 resp {

@@ -1,7 +1,31 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 export default function Index() {
     
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');
+
+    const navigate = useNavigate();
+    
+    async function entrarClick() {
+        try {
+            const r= await axios.post('http://localhost:5000/usuario/login', {
+                email: email, 
+                senha: senha
+            })
+                navigate('/admin');
+
+        } catch (err) {
+            if (err.response.status === 401){
+                setErro(err.response.data.erro);
+            }
+        }
+    }
+
     return (
         <main className="Page-Login">
 
@@ -10,16 +34,19 @@ export default function Index() {
             <div class="fb-column sub-f1">
             <h1 class="titulo">Acesse sua conta</h1>
             <div>
-                <h2 class="subtitulo">E-mail</h2>
-                <input class="tag-input" type="text" name="email" id=""/>
+                <h2 class="subtitulo"> E-mail</h2>
+                <input class="tag-input" type="text" name="email" id="" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
             <div>
                 <h2 class="subtitulo">Senha</h2>
-                <input class="tag-input" type="text" name="senha" id=""/>
+                <input class="tag-input" type="password" name="senha" id="" value={senha} onChange={ e => setSenha(e.target.value)}/>
             </div>
 
 
-            <Link className='botao' to="../admin"> Login </Link>
+            <button className='botao'onClick={entrarClick}> Login </button>
+            <div>
+                {erro}
+            </div>
             <Link className='voltar' to="../"> Página Inicial </Link>
             </div>
             </section>
