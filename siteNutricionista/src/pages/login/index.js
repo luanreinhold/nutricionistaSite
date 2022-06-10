@@ -37,6 +37,7 @@ export default function Index() {
                 <h2 class="subtitulo"> E-mail</h2>
                 <input class="tag-input" type="text" name="email" id="" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
+            
             <div>
                 <h2 class="subtitulo">Senha</h2>
                 <input class="tag-input" type="password" name="senha" id="" value={senha} onChange={ e => setSenha(e.target.value)}/>
