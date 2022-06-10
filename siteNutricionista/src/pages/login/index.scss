@@ -32,10 +32,15 @@ a {
 
 .botao {
     background-color: #E89897;
+    border: none;
+    border-radius: 1em;
+    padding: 10px 20px;
+    margin-top: 2em;
 }
 
+
 .botao:hover {
-    background-color: #e48d8c;
+    background-color: #b04c4a;
 }
 
 .sub-f1 {
