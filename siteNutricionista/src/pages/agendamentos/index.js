@@ -1,6 +1,20 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
+
 export default function Index() {
+    const [nome, setNome] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [nascimento, setNascimento] = useState('');
+    const [genero, setGenero] = useState(false);
+    const [cpf, setCpf] = useState('');
+    const [observacoes, setObseracoes] = useState('');
+
+    const [data, setData] = useState('');
+    const [horario, setHorario] = useState('');
+    const [pagamento, setPagamento] = useState('');
+    const [total, setTotal] = useState(0);
 
     return (
 

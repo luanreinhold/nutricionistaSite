@@ -1,7 +1,8 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import { login } from '../../api/usuarioApi.js'
 
+import storage from 'local-storage'
 import LoadingBar from 'react-top-loading-bar'
 import { useNavigate } from 'react-router-dom'
 import { useState, useRef } from 'react'
@@ -20,11 +21,8 @@ export default function Index() {
         ref.current.continuousStart();
         setCarregando(true);
         try {
-            const r= await axios.post('http://localhost:5000/usuario/login', {
-                email: email, 
-                senha: senha
-            })
-
+            const r = await login(email, senha)
+            storage('usuario-logado', r )
             setTimeout(() => {
                 navigate('/admin');
             }, 3000);

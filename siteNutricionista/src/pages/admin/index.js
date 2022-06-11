@@ -8,8 +8,8 @@ export default function Index() {
             <section class="fb-row faixa admin">
 
 <div class="fb-column indice"> 
-<h1 class="menu-titulo">Menu</h1>
-<Link to="../agendamentos" className='botao-f2'>Histórico de agendamentos</Link>
+    <h1 class="menu-titulo">Menu</h1>
+    <Link to="../agendamentos" className='botao-f2'>Histórico de agendamentos</Link>
 </div>
 
 <div class="fb-column sub1-f2">
