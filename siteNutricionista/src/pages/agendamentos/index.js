@@ -1,7 +1,7 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { cadastrarAgendamento } from '../../api/pacienteApi'
+import { cadastrarAgendamento, AlterarAgendamento } from '../../api/pacienteApi'
 import storage from 'local-storage';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -21,17 +21,43 @@ export default function Index() {
     const [horario, setHorario] = useState('');
     const [pagamento, setPagamento] = useState('');
     const [valortotal, setValortotal] = useState(0);
+//--
+    const [id, setId] = useState(0);
+
 
     async function SalvarClick() {
         try {
+
+          
             const usuario = storage('usuario-logado').id;
-            const r = await cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal);  
-            console.log(r)
+            
+            if (id === 0) {
+                const novoAgendamento = await cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, usuario);  
+                setId(novoAgendamento.id)
+            } else {
+                await AlterarAgendamento(id, nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, usuario);  
+            }
+                
             toast('Agendamento cadastrado com sucesso!');
         } catch (err) {
             toast.error(err.message)
         }
 
+        
+    }
+
+    function NovoClick() {
+        setId(0);
+        setNome('');
+        setTelefone('');
+        setNascimento('');
+        setGenero('');
+        setCpf('');
+        setObservacao('');
+        setConsulta('');
+        setHorario('');
+        setPagamento('');
+        setValortotal(0);
     }
 
 
@@ -149,11 +175,12 @@ export default function Index() {
 
      </div>
 
-             <div class="salvar texto">
-                 <div class="fb-row">
-                     <img class="save-img" src="/images/save-svgrepo-com (1).svg" alt=""/>
-                     <button onClick={SalvarClick}>Salvar Alterações</button>
-                 </div>
+             <div class=" fb-row">
+                 
+                     
+                        <button className='salvar texto ' onClick={SalvarClick}>Salvar Alterações</button> 
+                        <button className='salvar texto ' onClick={NovoClick}>Novo</button> 
+            
              </div>
 
     </div>

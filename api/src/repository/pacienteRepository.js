@@ -59,12 +59,13 @@ export async function editarAgendamento (id, paciente) {
         DS_CPF		        	= ?,
         DS_OBSERVACAO	        = ?,
         DT_CONSULTA	            = ?,
+        DS_HORARIO              = ?,
         DS_PAGAMENTO		    = ?,
         VL_VALORTOTAL	        = ?,
         BT_COMPARECEU           = ?
   WHERE ID_AGENDAMENTO = ?`;
 
-  const [resposta] = await con.query (comando, [paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.pagamento, paciente.valortotal, paciente.compareceu, id]);
+  const [resposta] = await con.query (comando, [paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.horario, paciente.pagamento, paciente.valortotal, paciente.compareceu, id]);
   return resposta.affectedRows;
 }
 

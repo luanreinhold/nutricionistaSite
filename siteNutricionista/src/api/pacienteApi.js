@@ -23,3 +23,24 @@ export async function cadastrarAgendamento(nome, telefone, nascimento, genero, c
     console.log(resposta)
     return resposta.data
 }
+
+export async function AlterarAgendamento(id, nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, compareceu) {
+    
+    const resposta = await api.put(`/agendamento/${id}`, {
+        nome: nome,
+        telefone: telefone,
+        nascimento: nascimento,
+        genero: genero,
+        cpf: cpf,
+        observacao: observacao,
+        consulta: consulta,
+        horario: horario,
+        pagamento: pagamento,
+        valortotal: valortotal,
+        compareceu: compareceu
+    })  
+
+
+    console.log(resposta)
+    return resposta.data
+}
