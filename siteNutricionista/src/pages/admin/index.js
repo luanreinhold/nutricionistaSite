@@ -9,10 +9,11 @@ export default function Index() {
 
 <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
-    <Link to="../agendamentos" className='botao-f2'>Histórico de agendamentos</Link>
+    <Link to="../historico" className='botao-f2'>Histórico de agendamentos</Link>
 </div>
 
 <div class="fb-column sub1-f2">
+
 
     <h1 class="titulo"> Agendamentos</h1>
     <h2 class="subtitulo">Aqui estão os últimos agendamentos que você criou</h2>
