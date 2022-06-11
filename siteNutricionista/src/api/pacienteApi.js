@@ -3,7 +3,8 @@ const api = axios.create({
     baseURL: 'http://localhost:5000'
 })
 
-export async function cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario , pagamento, valortotal, compareceu) {
+export async function cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, compareceu) {
+    
     const resposta = await api.post('/agendamento', {
         nome: nome,
         telefone: telefone,
