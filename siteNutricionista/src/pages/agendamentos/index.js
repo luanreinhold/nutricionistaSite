@@ -1,20 +1,34 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import { cadastrarAgendamento } from '../../api/pacienteApi'
+import storage from 'local-storage';
 
 export default function Index() {
     const [nome, setNome] = useState('');
     const [telefone, setTelefone] = useState('');
     const [nascimento, setNascimento] = useState('');
-    const [genero, setGenero] = useState(false);
+    const [genero, setGenero] = useState('');
     const [cpf, setCpf] = useState('');
-    const [observacoes, setObseracoes] = useState('');
+    const [observacao, setObservacao] = useState('');
 
-    const [data, setData] = useState('');
+    const [consulta, setConsulta] = useState('');
     const [horario, setHorario] = useState('');
     const [pagamento, setPagamento] = useState('');
-    const [total, setTotal] = useState(0);
+    const [valortotal, setValortotal] = useState(0);
+
+    async function SalvarClick() {
+        try {
+            const usuario = storage('usuario-logado').id;
+            const r = await cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal);  
+            console.log(r)
+            alert('Filme cadastrado com sucesso!');
+        } catch (err) {
+            alert(err.message)
+        }
+
+    }
+
 
     return (
 
@@ -49,12 +63,12 @@ export default function Index() {
 
                      <div class="caixa1">
                          <p class="desc1 texto">Nome</p>
-                         <input class="nome" type="text"/>
+                         <input class="nome" type="text" value={nome} onChange={e => setNome(e.target.value)}   />
                      </div>
 
                  <div class="caixa1">
                      <p class="desc2 texto">Telefone</p>
-                     <input class="ficha" type="text"/>
+                     <input class="ficha" type="text" value={telefone} onChange={e => setTelefone(e.target.value)} />
                  </div>
 
              </div>
@@ -64,22 +78,19 @@ export default function Index() {
              <div class="fileira1">
                  <div class="caixa1">
                      <p class="desc1 texto">Data de nascimento</p>
-                     <input class="dt-conf" type="date"/>
+                     <input class="dt-conf" type="date" value={nascimento} onChange={e => setNascimento(e.target.value)}  />
                  </div>
 
                  <div class="caixa1">
                      <p class="desc3 texto">Gênero</p>
-                     <select  class="genero-CPF" name="Selecione" id="">
-                         <option value="Selecione">Selecione</option>
-                         <option value="Feminino">Feminino</option>
-                         <option value="Masculino">Masculino</option>
-                     </select>
+                     <input class="genero-CPF" type="text" value={genero} onChange={e => setGenero(e.target.value)}   />
                  </div>
 
                  <div class="caixa1">
                      <p class="desc3 texto">CPF</p>
-                     <input class="genero-CPF" type="text"/>
+                     <input class="genero-CPF" type="text" value={cpf} onChange={e => setCpf(e.target.value)}   />
                  </div>
+                 
              </div>
          </div>
 
@@ -88,7 +99,7 @@ export default function Index() {
              <div class="fileira1">
                      <div class="caixa1">
                          <p class="desc1 texto">Obsevações:</p>
-                         <textarea class="obs" name="observações" id="" cols="30" rows="10"></textarea>
+                         <textarea class="obs" name="observações" id="" cols="30" rows="10" value={observacao} onChange={e => setObservacao(e.target.value)} />
                      </div>
              </div>
          </div>
@@ -102,14 +113,14 @@ export default function Index() {
                      <div class="fileira1">
                              <div class="caixa1">
                                  <p class="desc1 texto">Data:</p>
-                                 <input class="dt-conf" type="date"/>
+                                 <input class="dt-conf" type="date" value={consulta} onChange={e => setConsulta(e.target.value)}  />
                              </div>
 
                      <div class="caixas1">
                          <div class="fileira1">
                                  <div class="caixa1">
                                      <p class="desc4 texto">Horário:</p>
-                                     <input class="hora" type="time"/>
+                                     <input class="hora" type="text" value={horario} onChange={e => setHorario(e.target.value)} />
                                  </div>
                          </div>
                      </div>
@@ -118,14 +129,14 @@ export default function Index() {
                          <div class="fileira1">
                                  <div class="caixa1">
                                      <p class="desc4 texto">Forma de Pagamento:</p>
-                                     <input class="pag-valor" type="text"/>
+                                     <input class="pag-valor" type="text" value={pagamento} onChange={e => setPagamento(e.target.value)}  />
                                  </div>
                          </div>
                      </div>
                      <div class="fileira1">
                          <div class="caixa1">
                              <p class="desc4 texto">Valor total:</p>
-                             <input class="pag-valor" type="text"/>
+                             <input class="pag-valor" type="text" value={valortotal} onChange={e => setValortotal(e.target.value)} />
                          </div>
                      </div>
              </div>
@@ -133,12 +144,12 @@ export default function Index() {
 
      </div>
 
-             <a class="salvar texto" href="../../pages/admin-menu/admin.html">
+             <div class="salvar texto">
                  <div class="fb-row">
                      <img class="save-img" src="/images/save-svgrepo-com (1).svg" alt=""/>
-                     <p>Salvar Alterações</p>
+                     <button onClick={SalvarClick}>Salvar Alterações</button>
                  </div>
-             </a>
+             </div>
 
     </div>
 
