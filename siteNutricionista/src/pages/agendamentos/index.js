@@ -4,6 +4,11 @@ import { useState } from 'react';
 import { cadastrarAgendamento } from '../../api/pacienteApi'
 import storage from 'local-storage';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 export default function Index() {
     const [nome, setNome] = useState('');
     const [telefone, setTelefone] = useState('');
@@ -22,18 +27,18 @@ export default function Index() {
             const usuario = storage('usuario-logado').id;
             const r = await cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal);  
             console.log(r)
-            alert('Filme cadastrado com sucesso!');
+            toast('Agendamento cadastrado com sucesso!');
         } catch (err) {
-            alert(err.message)
+            toast.error(err.message)
         }
 
     }
 
 
     return (
-
+        
         <main className="Page_Agendamento">
-
+              <ToastContainer />
 <section class="pagina fb-row">
 
 <div class="indice fb-column">
@@ -83,7 +88,7 @@ export default function Index() {
 
                  <div class="caixa1">
                      <p class="desc3 texto">Gênero</p>
-                     <input class="genero-CPF" type="text" value={genero} onChange={e => setGenero(e.target.value)}   />
+                     <input class="genero-CPF" type="text" value={genero} onChange={e => setGenero(e.target.value)}   /> 
                  </div>
 
                  <div class="caixa1">
@@ -99,7 +104,7 @@ export default function Index() {
              <div class="fileira1">
                      <div class="caixa1">
                          <p class="desc1 texto">Obsevações:</p>
-                         <textarea class="obs" name="observações" id="" cols="30" rows="10" value={observacao} onChange={e => setObservacao(e.target.value)} />
+                         <textarea class="obs" name="observações" id="" cols="30" rows="10" value={observacao} onChange={e => setObservacao(e.target.value)} /> 
                      </div>
              </div>
          </div>
@@ -113,14 +118,14 @@ export default function Index() {
                      <div class="fileira1">
                              <div class="caixa1">
                                  <p class="desc1 texto">Data:</p>
-                                 <input class="dt-conf" type="date" value={consulta} onChange={e => setConsulta(e.target.value)}  />
+                                 <input class="dt-conf" type="date" value={consulta} onChange={e => setConsulta(e.target.value)}  />                        
                              </div>
 
                      <div class="caixas1">
                          <div class="fileira1">
                                  <div class="caixa1">
                                      <p class="desc4 texto">Horário:</p>
-                                     <input class="hora" type="text" value={horario} onChange={e => setHorario(e.target.value)} />
+                                     <input class="hora" type="text" value={horario} onChange={e => setHorario(e.target.value)} /> 
                                  </div>
                          </div>
                      </div>
@@ -129,14 +134,14 @@ export default function Index() {
                          <div class="fileira1">
                                  <div class="caixa1">
                                      <p class="desc4 texto">Forma de Pagamento:</p>
-                                     <input class="pag-valor" type="text" value={pagamento} onChange={e => setPagamento(e.target.value)}  />
+                                     <input class="pag-valor" type="text" value={pagamento} onChange={e => setPagamento(e.target.value)}  /> 
                                  </div>
                          </div>
                      </div>
                      <div class="fileira1">
                          <div class="caixa1">
                              <p class="desc4 texto">Valor total:</p>
-                             <input class="pag-valor" type="text" value={valortotal} onChange={e => setValortotal(e.target.value)} />
+                             <input class="pag-valor" type="text" value={valortotal} onChange={e => setValortotal(e.target.value)} /> 
                          </div>
                      </div>
              </div>
