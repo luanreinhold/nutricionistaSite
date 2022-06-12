@@ -176,8 +176,8 @@ export default function Index() {
 
              <div class="fb-row  left">
                  
-                        <button className='salvar texto margem-botoes-salvar' onClick={SalvarClick}>Novo</button> 
-                        <button className='salvar texto margem-botoes-salvar' onClick={NovoClick}>Salvar Alterações</button> 
+                        <button className='salvar texto margem-botoes-salvar' onClick={SalvarClick}>Salvar Alterações</button> 
+                        <button className='salvar texto margem-botoes-salvar' onClick={NovoClick}>Novo</button> 
             
              </div>
 
