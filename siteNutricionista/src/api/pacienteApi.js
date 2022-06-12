@@ -44,3 +44,13 @@ export async function AlterarAgendamento(id, nome, telefone, nascimento, genero,
     console.log(resposta)
     return resposta.data
 }
+
+export async function listarTodosAgendamentos() {
+    const resp = await api.get('/agendamento')
+    return resp.data;
+}
+
+export async function listarAgendamentoNome(nome) {
+    const resposta = await api.get(`/agendamento/${nome}`)
+    return resposta.data
+}

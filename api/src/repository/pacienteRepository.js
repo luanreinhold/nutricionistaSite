@@ -98,3 +98,17 @@ export async function BuscarPorNome(nome) {
     return linhas;
 }
 
+export async function listarTodos() {
+    const comando = 
+    `
+        SELECT 	NM_PACIENTE			 NOME,
+                DS_CPF				 CPF,
+                DT_CONSULTA			 DATA,
+                DS_HORARIO			 HORARIO,
+                VL_VALORTOTAL		 TOTAL
+         FROM 	TB_AGENDAMENTO
+
+    `
+    const [resposta] = await con.query(comando);
+    return resposta
+}

@@ -1,7 +1,23 @@
 import { Router } from 'express'
-import { BuscarPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento } from '../repository/pacienteRepository.js';
+import { BuscarPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento, listarTodos } from '../repository/pacienteRepository.js';
 
 const server = Router();
+
+
+server.get('/agendamento', async (req, resp) => {
+
+    try {
+        const visualiarAgendamentos = await listarTodos();
+        resp.send(visualiarAgendamentos);
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+
+
+
+})
 
 server.post('/agendamento', async (req,resp) => {
 

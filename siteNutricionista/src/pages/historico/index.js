@@ -1,7 +1,23 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-export default function historico() {
+import {listarTodosAgendamentos} from '../../api/pacienteApi'
+import { useEffect, useState } from 'react';
+
+export default function Index() {
+    const [pacientes, setPacientes] = useState([]);
+ 
+
+    async function carregarTodosAgendamentos() {
+        const resp = await listarTodosAgendamentos();
+        setPacientes(resp);
+    }
+
+
+
+    useEffect(() => {
+        carregarTodosAgendamentos();
+    }, [])
 
     return (
         <main className='Page-Historico'>
@@ -23,7 +39,7 @@ export default function historico() {
 
             <div className='fb-row input-width'>
                 <label className='label'> Nome:  </label>
-                <input type='text' className='tag-input'/>
+                            <input type='text' className='tag-input' />
             </div>
 
             <div className='fb-row input-width'>
@@ -63,19 +79,28 @@ export default function historico() {
                             </td>
                             <td><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
                             
-                        </tr>
-                        <tr>
-                            <td> Paciente 2</td>
-                            <td> 489 421 778 41</td>
-                            <td>01/05/20222</td>
-                            <td> 15:30</td>
-                            <td>150,00</td>
-                            <td>02</td>
-                            <td>
-                            <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
-                            </td>
-                            <td>    <button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
-                        </tr>
+                                </tr>
+                                
+                                {pacientes.map(item =>
+                                    <tr>
+                                        
+                                                    <td>{item.NOME}</td>
+                                                    <td>{item.CPF}</td>
+                                                    <td>{item.DATA}</td>
+                                                    <td>{item.HORARIO}</td>
+                                                    <td>{item.TOTAL}</td>
+                                                    <td>02</td>
+                                                    <td>
+                                                    <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
+                                                    </td>
+                                                    <td>    <button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
+                                                       
+                                    </tr>
+
+                                    )}
+                                    
+
+                        
                     </tbody>
                 </table>
 
