@@ -408,38 +408,92 @@
     /* responsividade !! */
     
    
-    @media (max-width: 480px) {
+    @media (max-width:480px) {
     
-   
+        .header{
+
+            width: 45%;
+            height: 2em;
+            padding: 0em 0em !important;
+        }
+    
         .sloogan {
             font-size: 15px;
         
         }
-        
-        .header {
-            width: 40%;
-            
-        }
-        
-        
-        
         .logo {
             width: 2em;
             height: 2em;
         }
-
+        
         .login {
             height: 1em;
             width: 2em;
-            border-radius: 0.7em;
+            border-radius: 0.6em;
             font-size: 12px;
         }
-        .f1-doutora{
+
+        
+        .f1  {
+            height: 100vh;
+            margin-top: 0px;
             
         }
-       
+        .responsividade{
+            margin-top: 4.8em;
+            height: 140px !important;
+            width: 110px !important;
+        }
+        
+        .f1-texto > p {
+            width: 20em;
+            margin-left: 1em;
+        }
+        
+
+    
+        .texto-home {
+            font-size: 12px !important;
+            text-align: center;
+            padding: 0px;
+        }
+
+        .subtitulo-home{
+            margin-top: 1em;
+        }
+    
+        .f2 {
+            height: 70vh;
+            background-color: #FFF8F6;
+        }
+        
+        .f2-texto > p {
+            width: 17em;
+            font-size: 12px;
+            margin-left: 2.5em;
+            margin-top: 1em;
+        }
+        
+        .f2-titulo {
+            font-size: 15px;
+            margin-bottom: 2em;
+        }
+        
+        .hr {
+            border-top: 3px solid #E89897;
+            border-radius: 2px;
+            margin-top: 0em;
+            margin-bottom: 2em;
+        }
+        
+        .f2-img {
+            width: 90px;
+            height: 100px;
+            border-radius: 1em;
+            margin-right: 0.5em;
+        }
     }
-   
+
    
    
    
@@ -507,10 +561,12 @@
     
     }
 
-}
+
+
 
   
 
 
 
 
+}
