@@ -87,16 +87,11 @@ export async function BuscarPorId(id) {
 export async function BuscarPorNome(nome) {
     const comando=
     `SELECT NM_PACIENTE     NOME,           
-            DS_TELEFONE     TELEFONE,       
-            DT_NASCIMENTO   NASCIMENTO,
-            DS_GENERO		GENERO,
-            DS_CPF		    CPF,    	
-            DS_OBSERVACAO	OBSERVACAO,        
+            DS_CPF		    CPF,    	       
             DT_CONSULTA	    DATA,
             DS_HORARIO      HORA,   
-            DS_PAGAMENTO    PAGAMENTO,   
             VL_VALORTOTAL	VALORTOTAL,
-            BT_COMPARECEU   COMPARACEU
+            ID_AGENDAMENTO  FICHA
     FROM 	TB_AGENDAMENTO
     WHERE 	NM_PACIENTE			like ?`;
    
@@ -106,13 +101,13 @@ export async function BuscarPorNome(nome) {
 
 export async function listarTodos() {
     const comando = 
-    `
-        SELECT 	NM_PACIENTE			 NOME,
-                DS_CPF				 CPF,
-                DT_CONSULTA			 DATA,
-                DS_HORARIO			 HORARIO,
-                VL_VALORTOTAL		 TOTAL,
-                ID_AGENDAMENTO       ID
+    
+    `SELECT NM_PACIENTE     NOME,           
+            DS_CPF		    CPF,    	       
+            DT_CONSULTA	    DATA,
+            DS_HORARIO      HORA,   
+            VL_VALORTOTAL	VALORTOTAL,
+            ID_AGENDAMENTO  FICHA
          FROM 	TB_AGENDAMENTO
 
     `
