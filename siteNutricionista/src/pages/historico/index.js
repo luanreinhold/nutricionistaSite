@@ -13,6 +13,7 @@ export default function Index() {
 
     async function buscarNomeClick() {
         const resp = await buscarNome(filtro);
+        
         setPacientes(resp);
     }
  
