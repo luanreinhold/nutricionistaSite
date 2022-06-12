@@ -6,9 +6,9 @@ export async function criarTabela (paciente) {
 INSERT INTO TB_AGENDAMENTO (ID_USUARIO, NM_PACIENTE, DS_TELEFONE, DT_NASCIMENTO, DS_GENERO, DS_CPF, DS_OBSERVACAO, DT_CONSULTA, DS_HORARIO, DS_PAGAMENTO, VL_VALORTOTAL, BT_COMPARECEU)
 VALUES(?,?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?)
 `;
-    const [resposta] = await con.query (comando, [paciente.id, paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.horario, paciente.pagamento, paciente.valortotal, paciente.compareceu])
+    const [resposta] = await con.query (comando, [paciente.usuario, paciente.nome, paciente.telefone, paciente.nascimento, paciente.genero, paciente.cpf, paciente.observacao, paciente.consulta, paciente.horario, paciente.pagamento, paciente.valortotal, paciente.compareceu])
     paciente.id = resposta.insertId;
-    return paciente
+    return paciente;
 }
 
 export async function deletarAgendamento (id) {
@@ -105,7 +105,8 @@ export async function listarTodos() {
                 DS_CPF				 CPF,
                 DT_CONSULTA			 DATA,
                 DS_HORARIO			 HORARIO,
-                VL_VALORTOTAL		 TOTAL
+                VL_VALORTOTAL		 TOTAL,
+                ID_AGENDAMENTO       ID
          FROM 	TB_AGENDAMENTO
 
     `

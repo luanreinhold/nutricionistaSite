@@ -89,7 +89,7 @@ export default function Index() {
                                                     <td>{item.DATA}</td>
                                                     <td>{item.HORARIO}</td>
                                                     <td>{item.TOTAL}</td>
-                                                    <td>02</td>
+                                                    <td>{item.ID}</td>
                                                     <td>
                                                     <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
                                                     </td>
