@@ -19,6 +19,7 @@ a {
 .imagem-f1 {
     width: 50%;
     height: 100%;
+    padding-right: 1em;
 }
 
 .voltar {
@@ -97,9 +98,11 @@ a {
 }
 
 .tag-input {
-    height: 1.5em;
+    height: 2em;
     width: 100%;
     border: none;
+    border-radius: 5px;
+    padding-left: 5px;
     background-color: #DCDCDC;
 }
 
@@ -122,11 +125,45 @@ a {
 
 
 
-@media (max-width:900px){
+@media (max-width:480px){
+    
     .imagem-f1 {
-     display: none;   
+       display: none;
+    }
+    .faixa1 {
+        background-color: #E89897;
+    }
+   
+    .sub-f1 {
+        width: 80%;
+        border-radius: 1em;
+        height: 70%;
+    }
+    .titulo{
+        font-size: 1em;
+    }
+    .subtitulo{
+        font-size: 10px;
     }
 
+    .tag-input {
+        height: 15px;
+        width: 100%;
+    }
+}
+ 
+.botao {
+    background-color: #E89897;
+    border-radius: 1em;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+.voltar{
+    font-size: 8px;
+}
+
+}
+@media (max-width:900px){
     .faixa1 {
         
         background-size: cover;
@@ -141,4 +178,3 @@ a {
 
 }
     
-}

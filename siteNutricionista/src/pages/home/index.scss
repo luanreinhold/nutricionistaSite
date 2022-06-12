@@ -407,6 +407,42 @@
     
     /* responsividade !! */
     
+   
+    @media (max-width: 480px) {
+    
+   
+        .sloogan {
+            font-size: 15px;
+        
+        }
+        
+        .header {
+            width: 40%;
+            
+        }
+        
+        
+        
+        .logo {
+            width: 2em;
+            height: 2em;
+        }
+
+        .login {
+            height: 1em;
+            width: 2em;
+            border-radius: 0.7em;
+            font-size: 12px;
+        }
+        .f1-doutora{
+            
+        }
+       
+    }
+   
+   
+   
+   
     @media (max-width:800px) {
     
     
@@ -472,3 +508,9 @@
     }
 
 }
+
+  
+
+
+
+
