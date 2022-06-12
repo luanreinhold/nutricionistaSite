@@ -1,18 +1,41 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-import {listarTodosAgendamentos} from '../../api/pacienteApi'
+import {listarTodosAgendamentos, deletarAgendamento} from '../../api/pacienteApi'
 import { useEffect, useState } from 'react';
+
+import { confirmAlert } from 'react-confirm-alert';
 
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
  
-
     async function carregarTodosAgendamentos() {
         const resp = await listarTodosAgendamentos();
         setPacientes(resp);
     }
 
+    async function deletarClick(id, nome) {
+
+        confirmAlert({
+            title: 'Deletar Agendamento',
+            message: `Deseja deletar o agendamento de ${nome}?`,
+            buttons: [
+                {
+                    label: 'Sim',
+                    onClick: async () => {
+                        const resp = await deletarAgendamento(id);
+                        console.log('agendamento removido!');
+                        carregarTodosAgendamentos();
+                    }
+                },
+                {
+                    label: 'Não'
+                }
+            ]
+        })
+
+        
+    }
 
 
     useEffect(() => {
@@ -67,19 +90,6 @@ export default function Index() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td> Paciente 1</td>
-                            <td> 484 491 398 05</td>
-                            <td>01/05/20222</td>
-                            <td> 15:30</td>
-                            <td>150,00</td>
-                            <td>01</td>
-                            <td>
-                            <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
-                            </td>
-                            <td><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
-                            
-                                </tr>
                                 
                                 {pacientes.map(item =>
                                     <tr>
@@ -93,7 +103,7 @@ export default function Index() {
                                                     <td>
                                                     <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
                                                     </td>
-                                                    <td>    <button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
+                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.ID, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
                                                        
                                     </tr>
 
