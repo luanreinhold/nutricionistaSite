@@ -4,6 +4,7 @@ import './index.scss';
 import {listarTodosAgendamentos, deletarAgendamento} from '../../api/pacienteApi'
 import { useEffect, useState } from 'react';
 
+import { toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
 
 export default function Index() {
@@ -24,8 +25,8 @@ export default function Index() {
                     label: 'Sim',
                     onClick: async () => {
                         const resp = await deletarAgendamento(id);
-                        console.log('agendamento removido!');
                         carregarTodosAgendamentos();
+                        toast.dark('Agendamento removido com sucesso!');
                     }
                 },
                 {
@@ -92,7 +93,7 @@ export default function Index() {
                     <tbody>
                                 
                                 {pacientes.map(item =>
-                                    <tr>
+                                    <tr key={item.ID}>
                                         
                                                     <td>{item.NOME}</td>
                                                     <td>{item.CPF}</td>
