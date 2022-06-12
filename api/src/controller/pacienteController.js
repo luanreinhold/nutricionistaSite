@@ -4,6 +4,24 @@ import { BuscarPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, c
 const server = Router();
 
 
+server.get('/agendamento/busca', async (req, resp) => {
+    try {
+        const { nome }= req.query;
+        const resposta= await BuscarPorNome(nome);
+        
+        if(resposta.length == 0)
+        throw new Error("Paciente não encontrado");
+        else
+        resp.send(resposta);
+        
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+        
+    }
+})
+
 server.get('/agendamento', async (req, resp) => {
 
     try {
@@ -18,6 +36,7 @@ server.get('/agendamento', async (req, resp) => {
 
 
 })
+
 
 server.post('/agendamento', async (req,resp) => {
 
@@ -101,23 +120,6 @@ server.put('/agendamento/:id', async (req,resp) => {
 
 }) 
 
-server.get('/paciente/busca', async (req, resp) => {
-    try {
-        const{ nome }= req.query;
-        const resposta= await BuscarPorNome(nome);
-        
-        if(resposta.length == 0)
-        throw new Error("Paciente não encontrado");
-        
-        resp.send(resposta);
-        
-    } catch (err) {
-        resp.status(400).send({
-            erro: err.message
-        })
-        
-    }
-})
 
 
 server.get('/paciente/:id', async(req, resp) => {

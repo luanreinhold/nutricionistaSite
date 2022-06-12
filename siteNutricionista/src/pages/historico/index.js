@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-import {listarTodosAgendamentos, deletarAgendamento} from '../../api/pacienteApi'
+import {listarTodosAgendamentos, deletarAgendamento, buscarNome} from '../../api/pacienteApi.js';
 import { useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
@@ -9,6 +9,12 @@ import { confirmAlert } from 'react-confirm-alert';
 
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
+    const [filtro, setFiltro] = useState('');
+
+    async function buscarNomeClick() {
+        const resp = await buscarNome(filtro);
+        setPacientes(resp);
+    }
  
     async function carregarTodosAgendamentos() {
         const resp = await listarTodosAgendamentos();
@@ -34,8 +40,6 @@ export default function Index() {
                 }
             ]
         })
-
-        
     }
 
 
@@ -63,13 +67,15 @@ export default function Index() {
 
             <div className='fb-row input-width'>
                 <label className='label'> Nome:  </label>
-                            <input type='text' className='tag-input' />
+                            <input type='text' className='tag-input' placeholder='Digite o nome do paciente' value={filtro} onChange={e => setFiltro(e.target.value)} />
             </div>
 
             <div className='fb-row input-width'>
                 <label className='label'> Data: </label>
                 <input type='date' className='tag-input input-date'/>
             </div>
+
+            <img src='/images/search-svgrepo-com (1).svg' className='img-delete-edit' onClick={buscarNomeClick}/> 
 
         </div>
         

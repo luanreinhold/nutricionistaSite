@@ -40,7 +40,6 @@ export async function AlterarAgendamento(id, nome, telefone, nascimento, genero,
         compareceu: compareceu
     })  
 
-
     console.log(resposta)
     return resposta.data
 }
@@ -50,9 +49,9 @@ export async function listarTodosAgendamentos() {
     return resp.data;
 }
 
-export async function listarAgendamentoNome(nome) {
-    const resposta = await api.get(`/agendamento/${nome}`)
-    return resposta.data
+export async function buscarNome(filtro) {
+    const resposta = await api.get(`/agendamento/busca?nome=${filtro}`)
+    return resposta.data;
 }
 
 export async function deletarAgendamento(id){
