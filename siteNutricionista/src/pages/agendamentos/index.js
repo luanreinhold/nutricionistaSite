@@ -78,12 +78,11 @@ export default function Index() {
        </div>
 
 
-    <div class="fb-column editando jc-center">
+    <div class="fb-column editando">
          <div class="titulos">
              <div>
                  <h1 class="titulo">Edição</h1>
                  <h2 class="subtitulo">Edite seus agendamentos aqui</h2>
-                 <h2 class="subtitulo">Ficha Nº X</h2>
 
              </div>
          </div>
@@ -175,11 +174,10 @@ export default function Index() {
 
      </div>
 
-             <div class=" fb-row">
+             <div class="fb-row  left">
                  
-                     
-                        <button className='salvar texto ' onClick={SalvarClick}>Salvar Alterações</button> 
-                        <button className='salvar texto ' onClick={NovoClick}>Novo</button> 
+                        <button className='salvar texto margem-botoes-salvar' onClick={SalvarClick}>Novo</button> 
+                        <button className='salvar texto margem-botoes-salvar' onClick={NovoClick}>Salvar Alterações</button> 
             
              </div>
 

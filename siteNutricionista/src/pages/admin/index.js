@@ -65,7 +65,7 @@ export default function Index() {
             </table>
             
             <Link className='novo-agendamento' to="../agendamentos"> 
-                    <img src="/images/adicionar.svg" alt=""/> <span>Novo</span>
+                    <img src="/images/adicionar.svg"  alt=""/> <span>Novo</span>
             </Link>
 
     </div>

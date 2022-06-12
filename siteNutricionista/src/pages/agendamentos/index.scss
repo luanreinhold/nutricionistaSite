@@ -9,8 +9,7 @@
     
     .editando {
         width: 60%;
-        height: 100vh;
-        padding: 3em;
+        padding: 3em 3em 0em 3em;
     }
     
     .pagina {
@@ -259,4 +258,12 @@
         margin-top: 2em;
     }
 
+    .left {
+        justify-content: left;
+    }
+
+    .margem-botoes-salvar {
+        padding: 0px !important;
+        margin-top: 1.5em;
+    }
 }

@@ -54,3 +54,8 @@ export async function listarAgendamentoNome(nome) {
     const resposta = await api.get(`/agendamento/${nome}`)
     return resposta.data
 }
+
+export async function deletarAgendamento(id){
+    const resposta = await api.delete(`/agendamento/${id}`);
+    return resposta.status;
+}
