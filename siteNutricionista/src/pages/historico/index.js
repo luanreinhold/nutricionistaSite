@@ -9,10 +9,12 @@ import { confirmAlert } from 'react-confirm-alert';
 
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
+    
     const [filtro, setFiltro] = useState('');
 
     async function buscarNomeClick() {
         const resp = await buscarNome(filtro);
+
         setPacientes(resp);
     }
  
