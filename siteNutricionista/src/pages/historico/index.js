@@ -112,7 +112,7 @@ export default function Index() {
                                                     <td>
                                                     <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
                                                     </td>
-                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.ID, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
+                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.FICHA, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
                                                        
                                     </tr>
 

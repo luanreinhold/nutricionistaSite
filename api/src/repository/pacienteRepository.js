@@ -13,6 +13,7 @@ VALUES(?,?, ?, ?, ?, ?, ?, ?, ? , ? , ?, ?)
 
 export async function deletarAgendamento (id) {
     const comando =
+        
     ` DELETE FROM   TB_AGENDAMENTO 
       WHERE         ID_AGENDAMENTO = ?`;
 
