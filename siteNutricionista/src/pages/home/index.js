@@ -38,7 +38,7 @@ export default function Index() {
 
             <p class="texto-menu">Após ter me graduado em nutrição, fiz uma especialização em Exercício Aplicado à Prevenção e Tratamento de Doenças e Obesidade .</p> 
             <p class="texto-menu">Desde 2020 possuo minha clinica própria onde atendo meus pacientes, mas também faço atendimentos online.</p> 
-            <p class="texto-menu">Já acompanhei mais de 150+ de clientes nesses últimos anos e obtivemos grandes resultados, minha missão é auxiliar meus clientes a conquistarem suas metas e objetivos de forma saudável e segura.</p>
+            <p class="texto-menu">Já acompanhei mais de 150 clientes nesses últimos anos e obtivemos grandes resultados, minha missão é auxiliar meus clientes a conquistarem suas metas e objetivos de forma saudável e segura.</p>
         </div>
         <div><img class="f2-img" src="/images/professional-woman.jpg" alt="/"/> </div>
     </section>
@@ -46,7 +46,7 @@ export default function Index() {
     <section class="f7 flexboxrow">
         <div> <img src="/images/aspascima.png" alt="aspas pra cima"/> </div>
         <p class="texto-home"> Nem toda dieta resulta em transtorno alimentar, mas quase todo transtorno alimentar começa com uma dieta.” – Polivy e Herman, 1985</p>
-        <div> <img src="/images/aspasbaixo.png" alt="aspas para baixo"/> </div>
+        <div> <img  src="/images/aspasbaixo.png" alt="aspas para baixo"/> </div>
     </section>
 
 
@@ -63,7 +63,7 @@ export default function Index() {
                 <p class="subtitulo-home cor-texto-f3"> O atendimento individualizado e focado nas necessidades pessoais de cada paciente.</p>
                 <p class="subtitulo-home cor-texto-f3"> Tratar os pacientes com excelência,empatia,respeito e inovação.</p>
             </div>
-            <img src="/images/cereja.png" alt=""/>
+            <img class="cereja"src="/images/cereja.png" alt=""/>
         </div>
         
     </section>
@@ -107,7 +107,7 @@ export default function Index() {
             <div><img class="footer-logo" src="/images/logo" alt=""/></div>
             <div>
                 <p>
-                    <b>
+                    <b class="endereco">
                     Avenida Pompéia, 684 – sala 31 – 2 andar 
                     Pompéia – São Paulo – SP – CEP: 05082-000
                     </b>
@@ -115,9 +115,9 @@ export default function Index() {
             </div>
             <div class="footer-icons">
 
-                <img src="/images/icone whatsapp.png" alt="icon whatsapp"/>
-                <img src="/images/icone facebook.jpg" alt="icon facebook"/>
-                <img src="/images/instagram-icone-noir.png" alt="icon instagram"/>
+                <img  class="icon" src="/images/icone whatsapp.png" alt="icon whatsapp"/>
+                <img  class="icon"src="/images/icone facebook.jpg" alt="icon facebook"/>
+                <img class="icon"src="/images/instagram-icone-noir.png" alt="icon instagram"/>
             </div>
         </footer>
     </section> 

@@ -412,9 +412,9 @@
     
         .header{
 
-            width: 45%;
+            width: 100%;
             height: 2em;
-            padding: 0em 0em !important;
+            padding: 0.8em !important;
         }
     
         .sloogan {
@@ -440,9 +440,9 @@
             
         }
         .responsividade{
-            margin-top: 4.8em;
-            height: 140px !important;
-            width: 110px !important;
+            margin-top: 4em;
+            height: 155px !important;
+            width: 115px !important;
         }
         
         .f1-texto > p {
@@ -468,7 +468,7 @@
         }
         
         .f2-texto > p {
-            width: 17em;
+            width: 16.5em;
             font-size: 12px;
             margin-left: 2.5em;
             margin-top: 1em;
@@ -487,16 +487,139 @@
         }
         
         .f2-img {
-            width: 90px;
-            height: 100px;
+            width: 100px;
+            height: 110px;
             border-radius: 1em;
-            margin-right: 0.5em;
+            margin-right: 1.5em;
         }
+        .hrf3 {
+            margin-top: 2em;
+            margin-bottom: 4em;
+            width: 70%;
+            position: relative;
+            bottom: 2em;
+            right:2px !important;
+        }
+        
+        .sub1-f3 {
+            width: 100%;
+        }
+        
+        .sub1-f3-textos {
+            margin: 2em;
+            position: relative;
+            bottom: 5em;
+
+        }
+        
+        .cereja{
+            display: none;   
+        }
+        
+    .cor-texto-f3{
+        width: 20em !important;
     }
 
-   
-   
-   
+    .f4 {
+        height: 60vh;
+    }
+    
+    .f4-container > div {
+        font-size: 10px;
+        padding: 26px 14px;
+    }
+    
+    
+    .f4-bloco1 {
+        height: 5em;
+        width: 15em;
+    }
+    
+    .f4-bloco2 {
+        display: none;
+    }
+    
+    .f4-imagem {
+        width: 100%;
+        height: 3em;
+    }
+    
+    .f4-titulo {
+        color:#000 !important;
+        text-align: center;
+        font-size: 1.5em;
+        padding-top: 1em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+    }
+    
+
+
+    .f6-titulo {
+        display: flex;
+        flex-direction: column !important;
+
+        width: 10em;
+        position: relative;
+        top: 1em;
+
+    }
+    
+    .subsub-f6 {
+        display: flex;
+        flex-direction: column !important;
+
+        font-size: 8px;
+        margin-left: 6.5em;
+        padding-bottom: 2em;
+        
+    }
+    
+    
+    .f6-texto {
+
+        padding-bottom: 3.5em;
+        margin-top: 4em;
+    }
+    
+    
+    .f6-img {
+        margin-left: 0.8em;
+       margin-top: 4em;
+       width: 260px;
+    }
+    footer {
+        height: 21vh;
+    }
+
+    .footer-logo{
+        width: 50px;
+        height: 45px;
+        margin-left: 1em;
+    }
+
+   .endereco {
+       font-size: 8px; 
+       width: 5em !important;  
+       margin-left: 1em;    
+   }
+
+   .footer-icons{
+       display: flex;
+       flex-direction: row;
+   }
+   .icon{
+       width: 15px !important;
+       height: 15px !important;
+       margin-top: 3em;
+       margin-right: 0.5em;
+   }
+
+
+
+
+
+
     @media (max-width:800px) {
     
     
@@ -568,5 +691,4 @@
 
 
 
-
-}
+    }}
