@@ -33,7 +33,7 @@ export default function Index() {
 
 
     <h1 class="titulo"> Agendamentos</h1>
-    <h2 class="subtitulo">Aqui estão os últimos agendamentos que você criou</h2>
+    <h2 class="subtitulo">Aqui estão os próximos agendamentos</h2>
 
     <div class="margem fb-column">
             <table class="agendamento">

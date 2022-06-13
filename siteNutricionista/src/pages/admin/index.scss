@@ -4,7 +4,7 @@
     .indice {
         background-color: #FAB5B4;
         height: 95vh;
-        width: 25%;
+        width: 20%;
         align-items: center;
         padding: 2em 0em 0em 0em;
     }
@@ -95,7 +95,8 @@
         margin-top: 2em;
         align-items: center;
         justify-content: flex-start;
-        box-shadow: -3px 3px 5px 0px rgb(68, 67, 67);
+        box-shadow: -3px 3px 5px 0px rgb(180, 180, 180);
+        overflow: auto;
     }
     
     .margem * {
@@ -111,7 +112,7 @@
         text-align: center;
         color: inherit;
         margin: 0px;
-        padding: 10px;
+        padding: 15px;
         line-height: 1.5em;
         width: 15%;
         font-family: 'Roboto-Light';
@@ -131,7 +132,7 @@
         background-color: #C5F4BD;
         font-family: 'Roboto-Light';
         font-size: 12px;
-        padding: 10px;
+        padding: 15px;
     }
     
     h1 {
