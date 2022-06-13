@@ -28,7 +28,7 @@ a {
     margin: 10px !important;
     text-decoration: underline !important;
     font-family: 'Poppins-Medium'!important;
-    font-size: 10px;
+    font-size: 10px !important;
 }
 
 .botao {
@@ -36,7 +36,11 @@ a {
     background-color: #E89897;
     border: none;
     border-radius: 2em !important;
+<<<<<<< HEAD
     padding: 12px 30px !important;
+=======
+    padding: 10px 20px !important;
+>>>>>>> 4c5fd1b1e1f1ff38aae99554bfc5e191d5643eab
     margin-top: 2em;
 }
 
