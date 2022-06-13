@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import storage from 'local-storage'
 
 import {listarTodosAgendamentos, deletarAgendamento, buscarNome} from '../../api/pacienteApi.js';
 import { useEffect, useState } from 'react';
@@ -9,6 +10,15 @@ import { confirmAlert } from 'react-confirm-alert';
 import { useNavigate } from 'react-router-dom';
 
 export default function Index() {
+    const [usuario, setUsuario] = useState('');
+
+    useEffect(() => {
+        if (storage('usuario-logado')) {
+            const usuarioLogado = storage('usuario-logado')
+            setUsuario(usuarioLogado.nome);
+        }
+    }, [])
+  
 
     const navigate = useNavigate();
 
@@ -67,6 +77,8 @@ export default function Index() {
     <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
     <Link to="../admin" className='botao-f2'> Agendamentos</Link>
+    
+    <Link to="../agendamentos" className='botao-f2'>Novo Agendamento</Link>
     </div>
 
     <div class="fb-column sub1-f2">
@@ -139,9 +151,8 @@ export default function Index() {
     <div class="logout">
         <div class="fb-row align-center">
             <img class="profile" src="/images/user-svgrepo-com.svg" alt=""/>
-            <h1>Dra. Laura</h1>
+            {usuario}
         </div>
-        <Link to="../"> Sair</Link>
     </div> 
 
 </section>

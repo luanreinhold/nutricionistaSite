@@ -27,6 +27,8 @@
     }
 
     .indice {
+        justify-content: space-evenly;
+        align-items: flex-start;
         background-color: #FAB5B4;
         height: 95vh;
         width: 20%;
@@ -148,6 +150,7 @@
 
     tr:hover {
         background-color: #c4c4c4;
+        cursor: pointer;
     }
 
 

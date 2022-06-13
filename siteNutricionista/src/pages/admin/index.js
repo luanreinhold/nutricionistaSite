@@ -12,10 +12,7 @@ import { useEffect, useState } from 'react';
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
     const [usuario, setUsuario] = useState('');
-    async function carregarTodosAgendamentos() {
-        const resp = await listarTodosAgendamentos();
-        setPacientes(resp);
-    }
+
 
     //-- apenas funções relacionadas a login
     const navigate = useNavigate();
@@ -23,6 +20,12 @@ export default function Index() {
     function sairClick() {
         storage.remove('usuario-logado');
         navigate('/')
+    }
+    //
+
+    async function carregarTodosAgendamentos() {
+        const resp = await listarTodosAgendamentos();
+        setPacientes(resp);
     }
 
     useEffect(() => {
@@ -49,11 +52,11 @@ export default function Index() {
 
 <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
-    <Link to="../historico" className='botao-f2'>Histórico de agendamentos</Link>
-    
+    <Link to="../historico" className='botao-f2'>Agendamentos Edição</Link>
+    <Link to="../agendamentos" className='botao-f2'>Novo Agendamento</Link>
                     
 
-    <div className='botao-f2' onClick={sairClick}>Sair</div>
+    <div className='botao-f2' onClick={sairClick}>Voltar Home</div>
 </div>
 
 <div class="fb-column sub1-f2">
@@ -100,7 +103,7 @@ export default function Index() {
         <img class="profile" src="/images/user-svgrepo-com.svg" alt=""/>
         {usuario}
     </div>
-    <Link to="../"> Sair</Link>
+
 </div> 
 
 </section>
