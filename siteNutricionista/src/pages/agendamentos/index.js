@@ -32,7 +32,7 @@ export default function Index() {
         if (idParam) {
             carregarAgendamentoo();
         }
-    })
+    }, [])
    
    async function carregarAgendamentoo() {
         const resposta = await buscarId(idParam);
@@ -60,11 +60,13 @@ export default function Index() {
             if (id === 0) {
                 const novoAgendamento = await cadastrarAgendamento(nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, usuario);  
                 setId(novoAgendamento.id)
+                toast('Agendamento cadastrado com sucesso!');
             } else {
                 await AlterarAgendamento(id, nome, telefone, nascimento, genero, cpf, observacao, consulta, horario, pagamento, valortotal, usuario);  
+                toast('Agendamento alterado com sucesso!');
             }
                 
-            toast('Agendamento cadastrado com sucesso!');
+            
         } catch (err) {
             toast.error(err.message)
         }

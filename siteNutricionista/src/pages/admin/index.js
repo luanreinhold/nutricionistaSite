@@ -36,9 +36,6 @@ export default function Index() {
     <h2 class="subtitulo">Aqui estão os últimos agendamentos que você criou</h2>
 
     <div class="margem fb-column">
-
-
-                
             <table class="agendamento">
                  <thead>
                     <tr  class="cabecalho"> 
@@ -48,30 +45,19 @@ export default function Index() {
                          <td>Horário</td>
                          <td>Valor Total</td>
                          <td>N° da ficha</td>
-                         <td></td>
-                         <td></td>
+
                     </tr>
                 </thead>
-                <tbody>
-
-
-                               
+                <tbody>     
                     {pacientes.map(item =>
-                                    <tr key={item.ID}>
-                                        
-                                                    <td>{item.NOME}</td>
-                                                    <td>{item.CPF}</td>
-                                                    <td>{item.DATA}</td>
-                                                    <td>{item.HORARIO}</td>
-                                                    <td>{item.TOTAL}</td>
-                                                    <td>{item.ID}</td>                                                                                       
-                                    </tr>
-
-                                    )}
-
-
-
-
+                        <tr key={item.ID}>           
+                            <td>{item.NOME}</td>
+                            <td>{item.CPF}</td>
+                            <td>{item.DATA}</td>
+                            <td>{item.HORA}</td>
+                            <td>{item.VALORTOTAL}</td>
+                            <td>{item.FICHA}</td>    
+                        </tr>)}
                 </tbody>
             </table>
             
