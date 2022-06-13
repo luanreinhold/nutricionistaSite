@@ -48,8 +48,6 @@ export default function Index() {
                          <td>Horário</td>
                          <td>Valor Total</td>
                          <td>N° da ficha</td>
-                         <td></td>
-                         <td></td>
                     </tr>
                 </thead>
                 <tbody>
