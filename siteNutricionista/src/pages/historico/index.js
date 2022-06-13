@@ -115,7 +115,7 @@ export default function Index() {
                                         
                                         <td>{item.NOME}</td>
                                         <td>{item.CPF}</td>
-                                        <td>{item.DATA}</td>
+                                        <td>{item.DATA && item.DATA.substr(0, 10)}</td>
                                         <td>{item.HORA}</td>
                                         <td>{item.VALORTOTAL}</td>
                                         <td>{item.FICHA}</td>
