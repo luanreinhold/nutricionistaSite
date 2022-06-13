@@ -21,9 +21,9 @@
     }
     
     .sub1-f2 {
-        width: 60%;
+        width: 75%;
         padding-top: 2em;
-        padding-left: 5em;
+        padding-left: 3em;
     }
     
     .margem {
@@ -111,12 +111,19 @@
         text-align: center;
         color: inherit;
         margin: 0px;
-        padding: 0px;
+        padding: 10px;
         line-height: 1.5em;
         width: 15%;
         font-family: 'Roboto-Light';
-        background-color: #DCDCDC;
         font-size: 12px;
+    }
+    
+    tr {
+        background-color: #DCDCDC;
+    }
+
+    tr:hover {
+        background-color: #c4c4c4;
     }
     
     

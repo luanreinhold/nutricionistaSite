@@ -19,10 +19,11 @@ export default function Index() {
 
     const [pacientes, setPacientes] = useState([]);
 
-    const [filtro, setFiltro] = useState('');
+    const [filtroNome, setFiltroNome] = useState('');
+    const [filtroData, setFiltroData] = useState('');
 
     async function buscarNomeClick() {
-        const resp = await buscarNome(filtro);
+        const resp = await buscarNome(filtroNome, filtroData);
         console.log(resp)
         setPacientes(resp);
     }
@@ -78,12 +79,12 @@ export default function Index() {
 
             <div className='fb-row input-width'>
                 <label className='label'> Nome:  </label>
-                            <input type='text' className='tag-input' placeholder='Digite o nome do paciente' value={filtro} onChange={e => setFiltro(e.target.value)} />
+                            <input type='text' className='tag-input' placeholder='Digite o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)} />
             </div>
 
             <div className='fb-row input-width'>
                 <label className='label'> Data: </label>
-                <input type='date' className='tag-input input-date'/>
+                <input type='date' className='tag-input input-date' value={filtroData} onChange={e => setFiltroData(e.target.value)} />
             </div>
 
             <img src='/images/search-svgrepo-com (1).svg' className='img-delete-edit' alt='' onClick={buscarNomeClick}/> 
@@ -107,7 +108,7 @@ export default function Index() {
                             <td></td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='tbody'>
                                 
                                 {pacientes.map(item =>
                                     <tr key={item.ID}>
