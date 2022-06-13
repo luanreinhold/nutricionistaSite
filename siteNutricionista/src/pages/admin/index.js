@@ -1,5 +1,8 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import storage from 'local-storage'
 
 import {listarTodosAgendamentos} from '../../api/pacienteApi.js';
 import { useEffect, useState } from 'react';
@@ -8,11 +11,31 @@ import { useEffect, useState } from 'react';
 
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
-
+    const [usuario, setUsuario] = useState('');
     async function carregarTodosAgendamentos() {
         const resp = await listarTodosAgendamentos();
         setPacientes(resp);
     }
+
+    //-- apenas funções relacionadas a login
+    const navigate = useNavigate();
+
+    function sairClick() {
+        storage.remove('usuario-logado');
+        navigate('/')
+    }
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+            navigate('/')
+        } else {
+            const usuarioLogado = storage('usuario-logado')
+            setUsuario(usuarioLogado.nome);
+        }
+
+    })
+
+    //--------
 
     useEffect(() => {
         carregarTodosAgendamentos();
@@ -27,6 +50,10 @@ export default function Index() {
 <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
     <Link to="../historico" className='botao-f2'>Histórico de agendamentos</Link>
+    
+                    
+
+    <div className='botao-f2' onClick={sairClick}>Sair</div>
 </div>
 
 <div class="fb-column sub1-f2">
@@ -69,9 +96,9 @@ export default function Index() {
 </div>
 
 <div class="logout">
-    <div class="fb-row align-center">
+    <div class="fb-row align-center" onClick={sairClick}>
         <img class="profile" src="/images/user-svgrepo-com.svg" alt=""/>
-        <h1>Dra. Laura</h1>
+        {usuario}
     </div>
     <Link to="../"> Sair</Link>
 </div> 
