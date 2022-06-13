@@ -9,12 +9,12 @@ import { confirmAlert } from 'react-confirm-alert';
 
 export default function Index() {
     const [pacientes, setPacientes] = useState([]);
-    
+
     const [filtro, setFiltro] = useState('');
 
     async function buscarNomeClick() {
         const resp = await buscarNome(filtro);
-
+        console.log(resp)
         setPacientes(resp);
     }
  
@@ -106,13 +106,13 @@ export default function Index() {
                                                     <td>{item.NOME}</td>
                                                     <td>{item.CPF}</td>
                                                     <td>{item.DATA}</td>
-                                                    <td>{item.HORARIO}</td>
-                                                    <td>{item.TOTAL}</td>
-                                                    <td>{item.ID}</td>
+                                                    <td>{item.HORA}</td>
+                                                    <td>{item.VALORTOTAL}</td>
+                                                    <td>{item.FICHA}</td>
                                                     <td>
                                                     <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
                                                     </td>
-                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.ID, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
+                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.FICHA, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
                                                        
                                     </tr>
 
