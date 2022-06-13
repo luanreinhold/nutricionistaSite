@@ -70,19 +70,29 @@ export async function editarAgendamento (id, paciente) {
   return resposta.affectedRows;
 }
 
-export async function BuscarPorId(id) {
-    const comando=
-    `SELECT	DT_AGENDAMENTO		=	NOME,
-    DS_CPF				        =	CPF,
-    DT_AGENDAMENTO		        =	AGENDAMENTO,
-    DT_CONSULTA			        = 	DATAEHORA,
-    VL_VALORTOTAL		        = 	TOTAL,
-    ID_AGENDAMENTO		        = 	FICHA
-    FROM TB_AGENDAMENTO
-    WHERE ID_AGENDAMENTO = ? `;
-   
-    const[linhas]= await con.query(comando, [id]);
-    return linhas[0];
+export async function buscaPorId(id) {
+    const comando = 
+        
+    `
+    SELECT 
+        NM_PACIENTE             NOME,
+        DS_TELEFONE             TELEFONE,
+        DT_NASCIMENTO           DATA,
+        DS_GENERO		        GENERO,
+        DS_CPF		        	CPF,
+        DS_OBSERVACAO	        OBSERVACAO,
+        DT_CONSULTA	            CONSULTA,
+        DS_HORARIO              HORA,
+        DS_PAGAMENTO		    PAGAMENTO,
+        VL_VALORTOTAL	        TOTAL,
+        ID_AGENDAMENTO          ID
+
+  FROM  TB_AGENDAMENTO
+  WHERE ID_AGENDAMENTO = ? `;
+
+    const [resposta] = await con.query(comando, [id])
+    return resposta[0];
+
 }
 
 export async function BuscarPorNome(nome) {

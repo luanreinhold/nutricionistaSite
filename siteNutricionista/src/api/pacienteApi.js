@@ -58,3 +58,10 @@ export async function deletarAgendamento(id){
     const resposta = await api.delete(`/agendamento/${id}`);
     return resposta.status;
 }
+
+
+
+export async function buscarId(id) {
+    const resposta = await api.get(`/paciente/${id}`)
+    return resposta.data;
+}
