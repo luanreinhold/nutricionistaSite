@@ -19,6 +19,7 @@ root.render(
           <Route path='/login' element={<Login />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/agendamentos' element={<Agendamento />} />
+          <Route path='/agendamentos/alterar/:idParam' element={<Agendamento />} />
           <Route path='/historico' element={<Historico/>}/>
       </Routes>
     </BrowserRouter>

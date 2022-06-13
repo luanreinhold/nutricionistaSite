@@ -58,7 +58,7 @@ export default function Index() {
 
 
             <button className='botao'onClick={entrarClick} disabled={carregando}> Login </button>
-            <div>
+            <div className='erro'>
                 {erro}
             </div>
             <Link className='voltar' to="../"> Página Inicial </Link>

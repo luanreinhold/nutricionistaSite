@@ -1,12 +1,13 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { cadastrarAgendamento, AlterarAgendamento } from '../../api/pacienteApi'
+import { useEffect, useState } from 'react';
+import { cadastrarAgendamento, AlterarAgendamento, buscarId } from '../../api/pacienteApi'
 import storage from 'local-storage';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { useParams } from 'react-router-dom';
 
 
 export default function Index() {
@@ -23,6 +24,31 @@ export default function Index() {
     const [valortotal, setValortotal] = useState(0);
 //--
     const [id, setId] = useState(0);
+
+    const { idParam } = useParams();
+
+
+    useEffect(() => {
+        if (idParam) {
+            carregarAgendamentoo();
+        }
+    })
+   
+   async function carregarAgendamentoo() {
+        const resposta = await buscarId(idParam);
+       setNome(resposta.NOME);
+       setTelefone(resposta.TELEFONE);
+       setNascimento(resposta.DATA.substr(0, 10));
+       setGenero(resposta.GENERO);
+       setCpf(resposta.CPF);
+       setObservacao(resposta.OBSERVACAO);
+       setConsulta(resposta.CONSULTA.substr(0, 10));
+       setHorario(resposta.HORA);
+       setPagamento(resposta.PAGAMENTO);
+       setValortotal(resposta.TOTAL);
+       setId(resposta.ID);
+    }
+
 
 
     async function SalvarClick() {

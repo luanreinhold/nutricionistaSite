@@ -6,8 +6,17 @@ import { useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
+import { useNavigate } from 'react-router-dom';
 
 export default function Index() {
+
+    const navigate = useNavigate();
+
+    function editarAgendamento(id) {
+        navigate(`/agendamentos/alterar/${id}`);
+    }
+
+
     const [pacientes, setPacientes] = useState([]);
 
     const [filtro, setFiltro] = useState('');
@@ -77,7 +86,7 @@ export default function Index() {
                 <input type='date' className='tag-input input-date'/>
             </div>
 
-            <img src='/images/search-svgrepo-com (1).svg' className='img-delete-edit' onClick={buscarNomeClick}/> 
+            <img src='/images/search-svgrepo-com (1).svg' className='img-delete-edit' alt='' onClick={buscarNomeClick}/> 
 
         </div>
         
@@ -103,16 +112,16 @@ export default function Index() {
                                 {pacientes.map(item =>
                                     <tr key={item.ID}>
                                         
-                                                    <td>{item.NOME}</td>
-                                                    <td>{item.CPF}</td>
-                                                    <td>{item.DATA}</td>
-                                                    <td>{item.HORA}</td>
-                                                    <td>{item.VALORTOTAL}</td>
-                                                    <td>{item.FICHA}</td>
-                                                    <td>
-                                                    <Link to="../agendamentos" className='delete-edit'><button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt=""/></button></Link>
-                                                    </td>
-                                                    <td>    <button class="delete-edit" onClick={() => deletarClick(item.FICHA, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
+                                        <td>{item.NOME}</td>
+                                        <td>{item.CPF}</td>
+                                        <td>{item.DATA}</td>
+                                        <td>{item.HORA}</td>
+                                        <td>{item.VALORTOTAL}</td>
+                                        <td>{item.FICHA}</td>
+                                        <td>
+                                        <button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt="" onClick={() => editarAgendamento(item.FICHA)}/></button>
+                                        </td>
+                                        <td>    <button class="delete-edit" onClick={() => deletarClick(item.FICHA, item.NOME)}> <img class="img-delete-edit" src="/images/basic-delete-ui-svgrepo-com.svg" alt=""/></button></td>
                                                        
                                     </tr>
 

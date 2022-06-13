@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { BuscarPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento, listarTodos } from '../repository/pacienteRepository.js';
+import { buscaPorId, BuscarPorNome, consultarData, consultarnNomeAgendamento, criarTabela, deletarAgendamento, editarAgendamento, listarTodos } from '../repository/pacienteRepository.js';
 
 const server = Router();
 
@@ -124,8 +124,10 @@ server.put('/agendamento/:id', async (req,resp) => {
 
 server.get('/paciente/:id', async(req, resp) => {
     try {
-        const{id}= req.params;
-        const resposta= await BuscarPorId(Number(id));
+
+        const id  = req.params.id;
+        
+        const resposta= await buscaPorId(id);
         
         if(!resposta)
         throw new Error("Paciente não encontrado");
