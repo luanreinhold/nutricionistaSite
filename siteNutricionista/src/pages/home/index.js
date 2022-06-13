@@ -44,9 +44,9 @@ export default function Index() {
     </section>
 
     <section class="f7 flexboxrow">
-        <div> <img src="/images/aspascima.png" alt="aspas pra cima"/> </div>
-        <p class="texto-home"> Nem toda dieta resulta em transtorno alimentar, mas quase todo transtorno alimentar começa com uma dieta.” – Polivy e Herman, 1985</p>
-        <div> <img  src="/images/aspasbaixo.png" alt="aspas para baixo"/> </div>
+        <div> <img class="aspas" src="/images/aspascima.png" alt="aspas pra cima"/> </div>
+        <p class="texto-aspas"> Nem toda dieta resulta em transtorno alimentar, mas quase todo transtorno alimentar começa com uma dieta.” – Polivy e Herman, 1985</p>
+        <div> <img  class="aspas" src="/images/aspasbaixo.png" alt="aspas para baixo"/> </div>
     </section>
 
 

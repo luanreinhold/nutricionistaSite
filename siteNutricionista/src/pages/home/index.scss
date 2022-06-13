@@ -412,7 +412,7 @@
     
         .header{
 
-            width: 100%;
+            width: 90%;
             height: 2em;
             padding: 0.8em !important;
         }
@@ -615,17 +615,29 @@
        margin-right: 0.5em;
    }
 
+   .f7 {
+    height: 13vh;
+}
 
+.f7 p {
+    margin: 0px 10px;
 
+}
 
+.aspas{
+    width: 1em;
+    height: 1em;
+}
 
+.texto-aspas{
+    text-align: center;
+    font-size: 10px;
+    width: 22em;
+}
 
-    @media (max-width:800px) {
+@media (max-width:800px) {
     
-    
-    
-    
-        .titulo-home {
+    .titulo-home {
             font-size: 16px;
             text-align: center;
             padding: 0px;
@@ -680,15 +692,8 @@
         .f1-texto h2 {
             font-family: 'Poppins-Medium';
             color: #E89F95;
-        }
+            }
     
+        }
     }
-
-
-
-
-  
-
-
-
-    }}
+}
