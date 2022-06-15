@@ -2,6 +2,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
+
+    background-color: #EEFFFB;
+
     .indice {
         justify-content: space-evenly;
         align-items: flex-start;
@@ -12,7 +15,7 @@
         padding: 2em 0em 0em 0em;
     }
     
-    
+
     .admin {
         border-spacing: 0px 10px;
     }
@@ -32,7 +35,8 @@
     .margem {
         padding-bottom: 10px;
         margin-top: 2em;
-        height: 72.8vh !important;
+        height: 72.8vh;
+        background-color: #fff;
         overflow: auto;
         justify-content: space-between !important;
     }
@@ -50,8 +54,6 @@
         border-radius: 0px 20px 20px 0px;
         align-self: flex-start;
 
-        //--
-        
     }
     
     
@@ -143,7 +145,6 @@
         background-color: #C5F4BD;
         font-family: 'Roboto', sans-serif;
         font-size: 12px;
-        padding: 15px;
     }
     
     h1 {
@@ -181,9 +182,6 @@
         width: 15px;
         height: 15px;
     }
-
-
-
 
     .fb {
         display: flex;
@@ -245,5 +243,68 @@
     }
 
 
+    @media (max-width:480px) {
 
-}
+
+        .titulo {
+            font-size: 16px;
+        }
+
+        .subtitulo {
+            font-size: 14px;
+        }
+        
+        .admin {
+            flex-direction: column !important;
+        }
+
+        .indice {
+            height: 15vh;
+            width: 100%;
+            flex-direction: row !important;
+            padding: 0px;
+        }
+
+        .menu-titulo {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .sub1-f2 {
+            padding: 0px;
+            height: 80%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .agendamento{
+            width: 100%;
+        }
+
+        .botao-f2{
+            font-size: 12px;
+            align-self: center;
+            width: 40%;
+            border-radius: 2em;
+            width: 70%;
+        }
+
+
+        td {
+        margin: 0px;
+        padding: 5px;
+        line-height: 0.5em;
+        width: 5%;
+        }
+    
+        .logout  {
+            height: 5%;
+        }
+
+        tr {
+            height: max-content;
+        }
+
+    }
+
+} 
