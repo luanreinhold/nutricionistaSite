@@ -414,7 +414,7 @@
     
         .header{
 
-            width: 90%;
+            width: 100%;
             height: 2em;
             padding: 0.8em !important;
         }
@@ -437,7 +437,7 @@
 
         
         .f1  {
-            height: 100vh;
+            height: 80vh !important;
             margin-top: 0px;
             
         }
@@ -452,7 +452,9 @@
             margin-left: 1em;
         }
         
-
+        .f1p {
+            font-size: 20px;
+        }
     
         .texto-home {
             font-size: 12px !important;
@@ -467,17 +469,19 @@
         .f2 {
             height: 70vh;
             background-color: #FFF8F6;
+            justify-content: center;
+            align-items: center;
         }
-        
+     
         .f2-texto > p {
             width: 16.5em;
-            font-size: 12px;
+            font-size: 16px;
             margin-left: 2.5em;
             margin-top: 1em;
         }
         
         .f2-titulo {
-            font-size: 15px;
+            font-size: 25px;
             margin-bottom: 2em;
         }
         
@@ -489,10 +493,7 @@
         }
         
         .f2-img {
-            width: 100px;
-            height: 110px;
-            border-radius: 1em;
-            margin-right: 1.5em;
+            display: none;
         }
         .hrf3 {
             margin-top: 2em;
@@ -522,15 +523,29 @@
         width: 20em !important;
     }
 
+    .f3 {
+        height: 50vh !important;
+    }
+
+    .f4 > .faixa {
+        flex-direction: column;
+        height:40vh;
+    
+    }
     .f4 {
-        height: 60vh;
+        height:60vh;
     }
     
     .f4-container > div {
         font-size: 10px;
         padding: 26px 14px;
+        margin-bottom: 2em;
+        
     }
-    
+    .f4-container {
+        flex-direction: column;
+        align-items: center;
+    }
     
     .f4-bloco1 {
         height: 5em;
@@ -538,7 +553,8 @@
     }
     
     .f4-bloco2 {
-        display: none;
+        height: 5em;
+        width: 15em;
     }
     
     .f4-imagem {
@@ -555,7 +571,9 @@
         margin-bottom: 4em;
     }
     
-
+    .f6 {
+        height: 60vh !important;
+    }
 
     .f6-titulo {
         display: flex;
