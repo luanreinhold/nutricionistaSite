@@ -117,8 +117,6 @@ export async function BuscarPorNome(nome, data) {
 
 export async function listarTodos() {
 
-
-
     const comando = 
     `SELECT NM_PACIENTE     NOME,           
             DS_CPF		    CPF,    	       
