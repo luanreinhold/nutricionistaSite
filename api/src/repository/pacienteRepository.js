@@ -95,7 +95,7 @@ export async function buscaPorId(id) {
 
 }
 
-export async function BuscarPorNome(nome) {
+export async function BuscarPorNome(nome, data) {
     const comando=
     `SELECT NM_PACIENTE     NOME,           
             DS_CPF		    CPF,    	       
@@ -104,23 +104,29 @@ export async function BuscarPorNome(nome) {
             VL_VALORTOTAL	VALORTOTAL,
             ID_AGENDAMENTO  FICHA
     FROM 	TB_AGENDAMENTO
-    WHERE 	NM_PACIENTE			like ?`;
+    WHERE 	(? IS NULL OR NM_PACIENTE like ?)
+      AND   (? IS NULL OR DT_CONSULTA =    ?) `;
    
-    const[linhas]= await con.query(comando, [`%${nome}%`]);
+
+      if (data == '')
+        data = null;
+
+    const[linhas]= await con.query(comando, [nome, `%${nome}%`, data, data]);
     return linhas;
 }
 
 export async function listarTodos() {
+
     const comando = 
-    
     `SELECT NM_PACIENTE     NOME,           
             DS_CPF		    CPF,    	       
             DT_CONSULTA	    DATA,
             DS_HORARIO      HORA,   
             VL_VALORTOTAL	VALORTOTAL,
             ID_AGENDAMENTO  FICHA
-         FROM 	TB_AGENDAMENTO
-
+      FROM 	TB_AGENDAMENTO
+     WHERE  DT_CONSULTA >= DATE(NOW())
+     ORDER BY DT_CONSULTA ASC
     `
     const [resposta] = await con.query(comando);
     return resposta

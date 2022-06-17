@@ -23,8 +23,8 @@ export default function Index() {
         <div class="f1-texto">
             <h2 class="subtitulo-home"> Olá! sou a</h2>
             <h1 class="f1-prosa titulo-home"> Nutricionista Laura Santos CRN3 31080 </h1>
-            <p class="texto-home">Nasci em Fortaleza, desde criança já tinha interesse na área da saúde e uma grande curiosidade ao estudar sobre os alimentos. Já crescida resolvi vir para São Paulo para estudar Nutrição.</p> 
-            <p class="texto-home">Formada, iniciei a minha carreira profissional como estagiária e tive uma experiência maior com a suplementação alimentar.</p>
+            <p class="texto-home f1p ">Nasci em Fortaleza, desde criança já tinha interesse na área da saúde e uma grande curiosidade ao estudar sobre os alimentos. Já crescida resolvi vir para São Paulo para estudar Nutrição.</p> 
+            <p class="texto-home f1p">Formada, iniciei a minha carreira profissional como estagiária e tive uma experiência maior com a suplementação alimentar.</p>
         </div>
     </section>
 

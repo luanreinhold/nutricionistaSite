@@ -6,12 +6,12 @@ const server = Router();
 
 server.get('/agendamento/busca', async (req, resp) => {
     try {
-        const { nome }= req.query;
-        const resposta= await BuscarPorNome(nome);
+        const { nome, data } = req.query;
+        const resposta= await BuscarPorNome(nome, data);
         
-        if(resposta.length == 0)
-        throw new Error("Paciente não encontrado");
-        else
+      //  if(resposta.length == 0)
+      //  throw new Error("Paciente não encontrado");
+      //  else
         resp.send(resposta);
         
     } catch (err) {

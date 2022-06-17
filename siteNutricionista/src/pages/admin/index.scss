@@ -1,54 +1,66 @@
 .Page-Admin {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
+
+    background-color: #EEFFFB;
 
     .indice {
+        justify-content: space-evenly;
+        align-items: flex-start;
         background-color: #FAB5B4;
         height: 95vh;
-        width: 25%;
+        width: 20%;
         align-items: center;
         padding: 2em 0em 0em 0em;
     }
     
-    
+
     .admin {
         border-spacing: 0px 10px;
     }
     
     .menu-titulo {
-        font-family: 'Poppins-Bold';
+        font-family: 'Poppins', sans-serif;
         font-size: 22px;
         color: #fff;
     }
     
     .sub1-f2 {
-        width: 60%;
+        width: 75%;
         padding-top: 2em;
-        padding-left: 5em;
+        padding-left: 3em;
     }
     
     .margem {
         padding-bottom: 10px;
         margin-top: 2em;
-        height: 72.8vh !important;
+        height: 72.8vh;
+        background-color: #fff;
         overflow: auto;
         justify-content: space-between !important;
     }
     
     .botao-f2  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 2em;
         background-color: #fff;
         color: #000;
         padding: 0.5em 0px;
-        align-items: center;
-        font-family: 'Poppins-Medium' !important;
+        font-family: 'Poppins', sans-serif !important;
         width: 80%;
         border-radius: 0px 20px 20px 0px;
         align-self: flex-start;
+
     }
+    
     
     .botao-f2:hover {
         background-color: #ebe8e8;
         color: #f89f9e;
+        cursor: pointer;
     }
     
     .agendamento {
@@ -71,7 +83,7 @@
      text-decoration: underline !important;
         font-size: 10px;
         color: rgb(255, 0, 0);
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
     }
     
     .profile {
@@ -81,7 +93,7 @@
     }
     
     .botao-admin {
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
         width: 3em;
     }
     
@@ -95,7 +107,8 @@
         margin-top: 2em;
         align-items: center;
         justify-content: flex-start;
-        box-shadow: -3px 3px 5px 0px rgb(68, 67, 67);
+        box-shadow: -3px 3px 5px 0px rgb(180, 180, 180);
+        overflow: auto;
     }
     
     .margem * {
@@ -111,25 +124,32 @@
         text-align: center;
         color: inherit;
         margin: 0px;
-        padding: 0px;
+        padding: 15px;
         line-height: 1.5em;
         width: 15%;
-        font-family: 'Roboto-Light';
-        background-color: #DCDCDC;
+        font-family: 'Roboto', sans-serif;
         font-size: 12px;
+    }
+    
+    tr {
+        background-color: #DCDCDC;
+    }
+
+    tr:hover {
+        background-color: #c4c4c4;
+        cursor: pointer;
     }
     
     
     .cabecalho td {
         background-color: #C5F4BD;
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
         font-size: 12px;
-        padding: 10px;
     }
     
     h1 {
         font-size: 12px;
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
     }
     
     .novo-agendamento {
@@ -163,9 +183,6 @@
         height: 15px;
     }
 
-
-
-
     .fb {
         display: flex;
     }
@@ -195,13 +212,13 @@
     }
     
     .titulo {
-        font-family: 'Poppins-Bold';
+        font-family: 'Poppins', sans-serif;
         font-size: 22px;
         color: #01923F;
     }
     
     .subtitulo {
-        font-family: 'Poppins-Medium';
+        font-family: 'Poppins', sans-serif;
         font-size: 16px;
         color: #01923F;
     }
@@ -214,17 +231,80 @@
     }
     
     .texto {
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
         font-size: 15px;
     }
     
      a:link, a:active, a:visited {
         
         text-decoration: none;
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto', sans-serif;
         text-align: center;
     }
 
 
+    @media (max-width:480px) {
 
-}
+
+        .titulo {
+            font-size: 16px;
+        }
+
+        .subtitulo {
+            font-size: 14px;
+        }
+        
+        .admin {
+            flex-direction: column !important;
+        }
+
+        .indice {
+            height: 15vh;
+            width: 100%;
+            flex-direction: row !important;
+            padding: 0px;
+        }
+
+        .menu-titulo {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .sub1-f2 {
+            padding: 0px;
+            height: 80%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .agendamento{
+            width: 100%;
+        }
+
+        .botao-f2{
+            font-size: 12px;
+            align-self: center;
+            width: 40%;
+            border-radius: 2em;
+            width: 70%;
+        }
+
+
+        td {
+        margin: 0px;
+        padding: 5px;
+        line-height: 0.5em;
+        width: 5%;
+        }
+    
+        .logout  {
+            height: 5%;
+        }
+
+        tr {
+            height: max-content;
+        }
+
+    }
+
+} 

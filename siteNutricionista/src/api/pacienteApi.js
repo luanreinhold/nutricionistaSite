@@ -49,8 +49,8 @@ export async function listarTodosAgendamentos() {
     return resp.data;
 }
 
-export async function buscarNome(filtro) {
-    const resposta = await api.get(`/agendamento/busca?nome=${filtro}`)
+export async function buscarNome(nome, data) {
+    const resposta = await api.get(`/agendamento/busca?nome=${nome}&data=${data}`)
     return resposta.data;
 }
 
