@@ -98,11 +98,10 @@ export default function Index() {
 <div class="indice fb-column">
 
             <Link className='Menu' to="../admin">
-                <div class="fb-row align-center jc-center">
-                    <img class="home-img" src="/images/home-svgrepo-com.svg" alt=""/>
-                    <p class="texto">Voltar ao Menu</p>
-                </div>
+                <img class="home-img" src="/images/home-svgrepo-com.svg" alt=""/>
+                <p class="texto-botao">Voltar ao Menu</p>
             </Link>
+
        </div>
 
 

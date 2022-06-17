@@ -5,8 +5,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 
-
-
     * {
         margin: 0px;
         padding: 0px;
@@ -261,8 +259,8 @@
     }
     
     .f6-img {
-        height: 20em;
-        width: 30em;
+        height: 24em;
+        width: 34em;
         border-radius: 1em;
     }
     
@@ -288,7 +286,7 @@
         height: 28vh;
         justify-content: space-evenly;
         align-items: center;
-        font-family: roboto2;
+        font-family: 'Roboto';
         background-color: #2BC8A2;
         text-align: center;
     }
@@ -298,8 +296,6 @@
         width: 5em;
     }
     
-
-
 
     .fb {
         display: flex;
@@ -356,7 +352,7 @@
      a:link, a:active, a:visited {
         padding: 5px 20px;
         text-decoration: none;
-        font-family: 'Roboto-Light';
+        font-family: 'Roboto';
         text-align: center;
         margin-top: 2em;
     }
@@ -383,7 +379,7 @@
     }
     
     .subtitulo-home {
-        font-family: 'Poppins-Medium';
+        font-family: 'Poppins';
         font-size: 22px;
     }
     
@@ -438,14 +434,10 @@
 
         
         .f1  {
-<<<<<<< HEAD
             height: 80vh;
-=======
-            height: 80vh !important;
->>>>>>> 9ae940eca8c5fc6c733ffe68d48c4ae64cb03b98
             margin-top: 0px;
-            
         }
+
         .responsividade{
             margin-top: 4em;
             height: 155px !important;
@@ -500,6 +492,7 @@
         .f2-img {
             display: none;
         }
+
         .hrf3 {
             margin-top: 2em;
             margin-bottom: 4em;
@@ -524,201 +517,201 @@
             display: none;   
         }
         
-    .cor-texto-f3{
-        width: 20em !important;
-    }
-
-    .f3 {
-        height: 50vh !important;
-    }
-
-    .f4 > .faixa {
-        flex-direction: column;
-        height:40vh;
-    
-    }
-    .f4 {
-        height:60vh;
-    }
-    
-    .f4-container > div {
-        font-size: 10px;
-        padding: 26px 14px;
-        margin-bottom: 2em;
-        
-    }
-    .f4-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .f4-bloco1 {
-        height: 5em;
-        width: 15em;
-    }
-    
-    .f4-bloco2 {
-        height: 5em;
-        width: 15em;
-    }
-    
-    .f4-imagem {
-        width: 100%;
-        height: 3em;
-    }
-    
-    .f4-titulo {
-        color:#000 !important;
-        text-align: center;
-        font-size: 1.5em;
-        padding-top: 1em;
-        margin-top: 2em;
-        margin-bottom: 4em;
-    }
-    
-    .f6 {
-        height: 60vh !important;
-    }
-
-    .f6-titulo {
-        display: flex;
-        flex-direction: column !important;
-
-        width: 10em;
-        position: relative;
-        top: 1em;
-
-    }
-    
-    .subsub-f6 {
-        display: flex;
-        flex-direction: column !important;
-
-        font-size: 8px;
-        margin-left: 6.5em;
-        padding-bottom: 2em;
-        
-    }
-    
-    
-    .f6-texto {
-
-        padding-bottom: 3.5em;
-        margin-top: 4em;
-    }
-    
-    
-    .f6-img {
-        margin-left: 0.8em;
-       margin-top: 4em;
-       width: 260px;
-    }
-    footer {
-        height: 21vh;
-    }
-
-    .footer-logo{
-        width: 50px;
-        height: 45px;
-        margin-left: 1em;
-    }
-
-   .endereco {
-       font-size: 8px; 
-       width: 5em !important;  
-       margin-left: 1em;    
-   }
-
-   .footer-icons{
-       display: flex;
-       flex-direction: row;
-   }
-   .icon{
-       width: 15px !important;
-       height: 15px !important;
-       margin-top: 3em;
-       margin-right: 0.5em;
-   }
-
-   .f7 {
-    height: 13vh;
-}
-
-.f7 p {
-    margin: 0px 10px;
-
-}
-
-.aspas{
-    width: 1em;
-    height: 1em;
-}
-
-.texto-aspas{
-    text-align: center;
-    font-size: 10px;
-    width: 22em;
-}
-
-@media (max-width:800px) {
-    
-    .titulo-home {
-            font-size: 16px;
-            text-align: center;
-            padding: 0px;
-            justify-self: center;
-            margin-bottom: 1em;
+        .cor-texto-f3{
+            width: 20em !important;
         }
-        .subtitulo-home {
-            font-size: 14px;
-            text-align: center;
-            padding: 0px !important;
-            align-self: center;
+
+        .f3 {
+            height: 50vh !important;
+        }
+
+        .f4 > .faixa {
+            flex-direction: column;
+            height:40vh;
+        
+        }
+        .f4 {
+            height:60vh;
+        }
+        
+        .f4-container > div {
+            font-size: 10px;
+            padding: 26px 14px;
+            margin-bottom: 2em;
             
         }
-        .texto-home {
-            font-size: 12px !important;
-            text-align: center;
-            padding: 0px;
+        .f4-container {
+            flex-direction: column;
+            align-items: center;
         }
-    
-        .header {
-            height: 10%;
+        
+        .f4-bloco1 {
+            height: 5em;
+            width: 15em;
         }
-        .logo {
-            width: 3em;
+        
+        .f4-bloco2 {
+            height: 5em;
+            width: 15em;
+        }
+        
+        .f4-imagem {
+            width: 100%;
             height: 3em;
         }
-    
-    
-        .f1 {
-            flex-direction: column;
-        }
-        .f1-doutora {
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-        }
-        .responsividade {
-            height:45%;
-            width: 38%;
-        }
-        .f1-texto {
+        
+        .f4-titulo {
+            color:#000 !important;
             text-align: center;
+            font-size: 1.5em;
+            padding-top: 1em;
+            margin-top: 2em;
+            margin-bottom: 4em;
         }
-        .f1-prosa {
-            padding: 0px;
+        
+        .f6 {
+            height: 60vh !important;
         }
-    
-        .f1 h1 {
+
+        .f6-titulo {
+            display: flex;
+            flex-direction: column !important;
+
+            width: 10em;
+            position: relative;
+            top: 1em;
+
+        }
+        
+        .subsub-f6 {
+            display: flex;
+            flex-direction: column !important;
+
+            font-size: 8px;
+            margin-left: 6.5em;
+            padding-bottom: 2em;
+            
+        }
+        
+        
+        .f6-texto {
+
+            padding-bottom: 3.5em;
+            margin-top: 4em;
+        }
+        
+        
+        .f6-img {
+            margin-left: 0.8em;
+        margin-top: 4em;
+        width: 260px;
+        }
+        footer {
+            height: 21vh;
+        }
+
+        .footer-logo{
+            width: 50px;
+            height: 45px;
+            margin-left: 1em;
+        }
+
+        .endereco {
+            font-size: 8px; 
+            width: 5em !important;  
+            margin-left: 1em;    
+        }
+
+        .footer-icons{
+            display: flex;
+            flex-direction: row;
+        }
+        .icon{
+            width: 15px !important;
+            height: 15px !important;
+            margin-top: 3em;
+            margin-right: 0.5em;
+        }
+
+        .f7 {
+            height: 13vh;
+        }
+
+        .f7 p {
+            margin: 0px 10px;
+
+        }
+
+        .aspas{
+            width: 1em;
+            height: 1em;
+        }
+
+        .texto-aspas{
             text-align: center;
+            font-size: 10px;
+            width: 22em;
         }
-    
-        .f1-texto h2 {
-            font-family: 'Poppins', sans-serif;;
-            color: #E89F95;
-            }
-    
+
+        @media (max-width:800px) {
+            
+            .titulo-home {
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 0px;
+                    justify-self: center;
+                    margin-bottom: 1em;
+                }
+                .subtitulo-home {
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 0px !important;
+                    align-self: center;
+                    
+                }
+                .texto-home {
+                    font-size: 12px !important;
+                    text-align: center;
+                    padding: 0px;
+                }
+            
+                .header {
+                    height: 10%;
+                }
+                .logo {
+                    width: 3em;
+                    height: 3em;
+                }
+            
+            
+                .f1 {
+                    flex-direction: column;
+                }
+                .f1-doutora {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0px;
+                }
+                .responsividade {
+                    height:45%;
+                    width: 38%;
+                }
+                .f1-texto {
+                    text-align: center;
+                }
+                .f1-prosa {
+                    padding: 0px;
+                }
+            
+                .f1 h1 {
+                    text-align: center;
+                }
+            
+                .f1-texto h2 {
+                    font-family: 'Poppins', sans-serif;;
+                    color: #E89F95;
+                    }
+            
+                }
         }
-    }
 }

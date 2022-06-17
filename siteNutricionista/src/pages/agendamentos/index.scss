@@ -2,14 +2,14 @@
 
     .indice {
         background-color: #FAB5B4;
-        height: 100%;
-        width: 25%;
-        align-items: center;
+        height: 100vh;
+        width: 20%;
     }
     
     .editando {
-        width: 60%;
-        padding: 3em 3em 0em 3em;
+        width: 65%;
+        padding: 3em 5em 0em 5em;
+        justify-content: center;
     }
     
     .pagina {
@@ -18,16 +18,25 @@
         height: 100vh;
         width: 100%;
     }
-    
+
+    // correção
     .Menu {
-        margin-top: 3.5em;
-        padding: 10px 20px;
-        background-color: #ffff;
-        border-radius: 20px;
-        font-size: 14px;
-        width: 12em;
-        color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    background-color: #fff;
+    color: #000;
+    padding: 0.5em 0px;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 16px;
+    width: 80%;
+    border-radius: 0px 20px 20px 0px;
+    align-self: flex-start;
     }
+    //
     
     .titulos {
         margin-left: 0px;
@@ -47,6 +56,7 @@
         width: 15em;
         margin-top: 1em;
     }
+
     h3 {
         width: 9em;
         margin-top: 2.5em;
@@ -92,10 +102,7 @@
     
     }
     
-    
-    
     .obs{
-        
        width: 625px;
         height: 100px;
         background-color: #dcdcdc;
@@ -103,23 +110,21 @@
     }
     
     .hora {
-       
             width: 120px;
             height: 25px;
             margin-left: 2em;
             background-color: #dbdbdb;
             border: none;
-        }
+    }
     
     .pag-valor{
-    
             width: 138px;
             height: 25px;
     
             margin-left: 2em;
             background-color: #dbdbdb;
             border: none;
-        }
+    }
     
     .desc1 {
         margin-top: 1em;
@@ -177,9 +182,11 @@
     }
     
     .Menu:hover {
-        color: #d64d4d;
-        background-color: #bebebe;
+        background-color: #ebe8e8;
+        color: #f89f9e;
+        cursor: pointer;
     }
+
     
     .profile {
         width: 20px;
@@ -197,8 +204,8 @@
     }
     
     .home-img {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
 
@@ -250,8 +257,8 @@
     }
     
     .texto {
-        font-family: 'Roboto-Light';
-        font-size: 15px;
+        font-family: 'Poppins'; // roboto-light //
+        font-size: 16px;
     }
     
      a:link, a:active, a:visited {
@@ -269,5 +276,13 @@
     .margem-botoes-salvar {
         padding: 0px !important;
         margin-top: 1.5em;
+    }
+
+    // correções
+
+    .texto-botao {
+        font-family: 'Roboto'; // roboto-light //
+        font-size: 15px;
+        margin: 0px !important;
     }
 }

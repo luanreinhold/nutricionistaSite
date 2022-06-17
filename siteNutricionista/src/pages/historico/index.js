@@ -72,7 +72,7 @@ export default function Index() {
     return (
         <main className='Page-Historico'>
             
-            <section class="fb-row faixa admin">
+            <section class="faixa admin">
 
     <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
@@ -91,10 +91,10 @@ export default function Index() {
 
             <div className='fb-row input-width'>
                 <label className='label'> Nome:  </label>
-                            <input type='text' className='tag-input' placeholder='Digite o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)} />
+                <input type='text' className='tag-input' placeholder='Digite o nome do paciente' value={filtroNome} onChange={e => setFiltroNome(e.target.value)} />
             </div>
 
-            <div className='fb-row input-width'>
+            <div className='fb-row input-width-data '>
                 <label className='label'> Data: </label>
                 <input type='date' className='tag-input input-date' value={filtroData} onChange={e => setFiltroData(e.target.value)} />
             </div>
@@ -111,11 +111,11 @@ export default function Index() {
                     <thead>
                         <tr  class="cabecalho"> 
                             <td>Nome</td>
-                            <td>CPF</td>
+                            <td className='resp-celular'>CPF</td>
                             <td>Data</td>
                             <td>Horário</td>
                             <td>Valor Total</td>
-                            <td>N° da ficha</td>
+                            <td className='resp-celular' >N° da ficha</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -126,11 +126,11 @@ export default function Index() {
                                     <tr key={item.ID}>
                                         
                                         <td>{item.NOME}</td>
-                                        <td>{item.CPF}</td>
+                                        <td className='resp-celular'>{item.CPF}</td>
                                         <td>{item.DATA && item.DATA.substr(0, 10)}</td>
                                         <td>{item.HORA}</td>
                                         <td>{item.VALORTOTAL}</td>
-                                        <td>{item.FICHA}</td>
+                                        <td className='resp-celular'>{item.FICHA}</td>
                                         <td>
                                         <button class="delete-edit"> <img class="img-delete-edit" src="/images/basic-edit-pencil-svgrepo-com.svg" alt="" onClick={() => editarAgendamento(item.FICHA)}/></button>
                                         </td>
@@ -149,9 +149,9 @@ export default function Index() {
     </div>
 
     <div class="logout">
-        <div class="fb-row align-center">
+        <div class="fb-row align-center usuario-margem-edit">
             <img class="profile" src="/images/user-svgrepo-com.svg" alt=""/>
-            {usuario}
+            <div> {usuario} </div>
         </div>
     </div> 
 

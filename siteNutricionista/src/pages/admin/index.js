@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 
 
 export default function Index() {
+
     const [pacientes, setPacientes] = useState([]);
     const [usuario, setUsuario] = useState('');
 
@@ -21,6 +22,7 @@ export default function Index() {
         storage.remove('usuario-logado');
         navigate('/')
     }
+
     //
 
     async function carregarTodosAgendamentos() {
@@ -52,11 +54,11 @@ export default function Index() {
 
 <div class="fb-column indice"> 
     <h1 class="menu-titulo">Menu</h1>
-    <Link to="../historico" className='botao-f2'>Agendamentos Edição</Link>
+    <Link to="../historico" className='botao-f2'>Editar Agendamentos</Link>
     <Link to="../agendamentos" className='botao-f2'>Novo Agendamento</Link>
                     
 
-    <div className='botao-f2' onClick={sairClick}>Voltar Home</div>
+    <div className='botao-f2' onClick={sairClick}>Sair</div>
 </div>
 
 <div class="fb-column sub1-f2">
@@ -66,37 +68,37 @@ export default function Index() {
     <h2 class="subtitulo">Aqui estão os próximos agendamentos</h2>
 
     <div class="margem fb-column">
+        <div className="lista-agendamentos"> 
             <table class="agendamento">
                  <thead>
                     <tr  class="cabecalho"> 
                          <td>Nome</td>
-                         <td>CPF</td>
+                         <td className='resp-celular'>CPF</td>
                          <td>Data</td>
                          <td>Horário</td>
                          <td>Valor Total</td>
-                         <td>N° da ficha</td>
-<<<<<<< HEAD
-=======
-
->>>>>>> 8ecf9a1c0f9c0ffd3ff6aab040ce20211fb661e9
+                         <td className='resp-celular'>N° da ficha</td>
                     </tr>
                 </thead>
                 <tbody>     
                     {pacientes.map(item =>
                         <tr key={item.ID}>           
                             <td>{item.NOME}</td>
-                            <td>{item.CPF}</td>
+                            <td className='resp-celular'>{item.CPF}</td>
                             <td>{item.DATA && item.DATA.substr(0, 10)}</td>
                             <td>{item.HORA}</td>
                             <td>{item.VALORTOTAL}</td>
-                            <td>{item.FICHA}</td>    
+                            <td className='resp-celular'>{item.FICHA}</td>    
                         </tr>)}
                 </tbody>
             </table>
-            
+        </div>
+
+        <div className="botao-fixo">
             <Link className='novo-agendamento' to="../agendamentos"> 
-                    <img src="/images/adicionar.svg"  alt=""/> <span>Novo</span>
+                <img src="/images/adicionar.svg"  alt=""/> <span>Novo</span>
             </Link>
+        </div>
 
     </div>
 </div>
@@ -114,4 +116,4 @@ export default function Index() {
 
     )
 
-}
+} 
