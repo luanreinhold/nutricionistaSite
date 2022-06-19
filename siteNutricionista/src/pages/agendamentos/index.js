@@ -210,12 +210,6 @@ export default function Index() {
 
     </div>
 
-         <div class="fb-row align-center user">
-                 <img class="profile" src="/images/user-svgrepo-com.svg" alt=""/>
-                 <h1 class="texto">Dra. Laura</h1>
-         </div>
-
-
      </section>
 
         </main>
