@@ -412,30 +412,33 @@
         .header{
 
             width: 100%;
-            height: 2em;
-            padding: 0.8em !important;
+            height: 3.5em !important;
+            padding: 0.5em !important;
         }
     
         .sloogan {
-            font-size: 15px;
+            font-size: 13px;
         
         }
         .logo {
-            width: 2em;
-            height: 2em;
+            width: 1.5em;
+            height: 1.5em;
         }
         
         .login {
             height: 1em;
-            width: 2em;
+            width: 1.3em;
             border-radius: 0.6em;
             font-size: 12px;
         }
 
         
         .f1  {
-            height: 80vh;
+            height: 90vh;
+            width: 100%;
             margin-top: 0px;
+            text-align: center;
+            padding-bottom: 1em;
         }
 
         .responsividade{
@@ -445,71 +448,88 @@
         }
         
         .f1-texto > p {
-            width: 20em;
+            justify-content: center;
+            width: 17em;
+            font-size: 11px !important;
             margin-left: 1em;
+            text-align: center;
         }
         
-        .f1p {
-            font-size: 20px;
-        }
-    
+
+        
         .texto-home {
             font-size: 12px !important;
-            text-align: center;
             padding: 0px;
+            text-align: center;
         }
 
         .subtitulo-home{
             margin-top: 1em;
+            font-size: 12px !important;
+            text-align: center;
+        }
+        
+
+        .f1-prosa{
+            font-size: 14px !important;
+            text-align: center;
         }
     
         .f2 {
             height: 70vh;
-            background-color: #FFF8F6;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            padding-top: 3em;
+            padding-bottom: 0em;
         }
      
         .f2-texto > p {
             width: 16.5em;
-            font-size: 16px;
-            margin-left: 2.5em;
-            margin-top: 1em;
+            font-size: 10px;
+            margin-left: 5em;
+            margin-top: 1.5em;
+            color:  #d67371;
+            text-align: center;
+
         }
         
         .f2-titulo {
-            font-size: 25px;
+            font-size: 15px !important;
             margin-bottom: 2em;
+            margin-left: 4em;
         }
         
         .hr {
             border-top: 3px solid #E89897;
             border-radius: 2px;
             margin-top: 0em;
-            margin-bottom: 2em;
+            margin-bottom: 0.5em;
+            margin-left: 3.5em;
         }
         
         .f2-img {
             display: none;
         }
 
+        .f3 {
+            height: 55vh !important;
+            width: 100%;
+            background-color: #E89897;
+        }
+    
+
         .hrf3 {
             margin-top: 2em;
-            margin-bottom: 4em;
-            width: 70%;
+            margin-bottom: 1em;
+            width: 60%;
             position: relative;
             bottom: 2em;
             right:2px !important;
         }
-        
-        .sub1-f3 {
-            width: 100%;
-        }
-        
         .sub1-f3-textos {
-            margin: 2em;
+            margin-top: 1.5em;
             position: relative;
-            bottom: 5em;
+            bottom: 4.5em;
+            font-size: 10px;
 
         }
         
@@ -518,12 +538,13 @@
         }
         
         .cor-texto-f3{
-            width: 20em !important;
+            width: 15em !important;
+            font-size: 10px !important;
+
+            position: relative;
+            margin-top: 0.5em;
         }
 
-        .f3 {
-            height: 50vh !important;
-        }
 
         .f4 > .faixa {
             flex-direction: column;
@@ -532,10 +553,11 @@
         }
         .f4 {
             height:60vh;
+            width: 100%;
         }
         
         .f4-container > div {
-            font-size: 10px;
+            font-size: 9px;
             padding: 26px 14px;
             margin-bottom: 2em;
             
@@ -546,85 +568,94 @@
         }
         
         .f4-bloco1 {
-            height: 5em;
+            height: 4.5em;
             width: 15em;
         }
         
         .f4-bloco2 {
-            height: 5em;
+            height: 1.5em;
             width: 15em;
         }
         
         .f4-imagem {
             width: 100%;
-            height: 3em;
+            height: 2em;
         }
         
         .f4-titulo {
-            color:#000 !important;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 12px !important;
             padding-top: 1em;
             margin-top: 2em;
-            margin-bottom: 4em;
         }
         
         .f6 {
-            height: 60vh !important;
+            height: 90vh !important;
+            width: 100%;
+            background-color: #F4FFF9;
         }
 
         .f6-titulo {
             display: flex;
             flex-direction: column !important;
 
-            width: 10em;
+            width: 15em;
             position: relative;
-            top: 1em;
-
+            top: 4em;
+            font-size: 15px !important;
         }
         
         .subsub-f6 {
             display: flex;
             flex-direction: column !important;
 
-            font-size: 8px;
-            margin-left: 6.5em;
+            margin-left:2.5em;
             padding-bottom: 2em;
             
         }
+
         
         
         .f6-texto {
-
-            padding-bottom: 3.5em;
-            margin-top: 4em;
+            font-size: 9px;
+            padding: 1em;
+            width: 23em;
+            margin-top: 7em;
+        
         }
         
         
         .f6-img {
-            margin-left: 0.8em;
-        margin-top: 4em;
-        width: 260px;
+        margin-left: 3em;
+        width: 130px;
+        height: 80px;
+        margin-top: 1em;
+        border-radius: 5px;
         }
+       
+       
         footer {
-            height: 21vh;
+            height: 13vh;
+            width: 100%;
         }
 
         .footer-logo{
-            width: 50px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             margin-left: 1em;
         }
 
         .endereco {
-            font-size: 8px; 
-            width: 5em !important;  
+            font-size: 7px !important; 
+            width: 1em !important;  
             margin-left: 1em;    
         }
 
         .footer-icons{
             display: flex;
             flex-direction: row;
+            margin-bottom: 5em;
+            margin-top: 4em;
         }
         .icon{
             width: 15px !important;
@@ -634,7 +665,7 @@
         }
 
         .f7 {
-            height: 13vh;
+            height: 10vh;
         }
 
         .f7 p {
@@ -643,8 +674,8 @@
         }
 
         .aspas{
-            width: 1em;
-            height: 1em;
+            width: 0.6em;
+            height: 0.6em;
         }
 
         .texto-aspas{
