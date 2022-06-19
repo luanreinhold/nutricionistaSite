@@ -14,7 +14,6 @@
     
     .pagina {
         display: flex;
-        flex-direction: column;
         height: 100vh;
         width: 100%;
     }
@@ -284,5 +283,148 @@
         font-family: 'Roboto'; // roboto-light //
         font-size: 15px;
         margin: 0px !important;
+    }
+
+    @media (max-width: 480px) {
+
+        .pagina {
+            flex-direction: column !important;
+        }
+
+        .indice {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 0px 1em 0px;
+            height: 15%;
+            padding: 10px 0px;
+        }
+
+        .Menu {
+            height: 50%;
+            padding: 5px 10px !important;
+            margin-top: 0px !important;
+        }
+
+        .titulo {
+            padding: 2%;
+            font-size: 16px;
+            margin: 2%;
+        }
+
+        h2 {
+            max-width: 100% !important;
+        }
+
+        .subtitulo {
+        padding: 2%;
+        font-size: 14px;
+        margin: 2%;
+        }
+
+        .editando {
+            padding: 0px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .texto {
+            width: 100%;
+            padding: 2%;
+            font-size: 12px;
+        }
+
+        .nome{
+            width: 80%;
+        }
+
+        .fileira1 {
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .caixa1 {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 2%;
+            width: 96%;
+        }
+
+
+        .caixa-nome {
+            width: 98% !important;
+        }
+
+        .genero-CPF {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .obs {
+            width: 80%;
+        }
+        
+        .desc1 {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .desc2 {
+            margin: 0px;
+            width: 100%;
+        }
+
+        
+        .desc3 {
+            margin: 0px;
+            width: 50%;
+        }
+
+        
+        .desc4 {
+            margin: 0px;
+            width: 50%;
+        }
+
+        
+        .desc5 {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .dt-conf {
+            width: 50%;
+        }
+
+        .data-config {
+            width: 40% !important;
+        }
+
+        .ficha {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .pag-valor {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .hora {
+            margin: 0px;
+            width: 50%;
+        }
+
+        .cx-margem {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .user {
+            max-width: 100%;
+            padding: 2%;
+            display: none;
+        }
     }
 }

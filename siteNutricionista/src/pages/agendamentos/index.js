@@ -118,7 +118,7 @@ export default function Index() {
              <h3 class="texto"> Dados do paciente</h3>
              <div class="fileira1">
 
-                     <div class="caixa1">
+                     <div class="caixa1 caixa-nome">
                          <p class="desc1 texto">Nome</p>
                          <input class="nome" type="text" value={nome} onChange={e => setNome(e.target.value)}   />
                      </div>
@@ -170,12 +170,12 @@ export default function Index() {
                      <div class="fileira1">
                              <div class="caixa1">
                                  <p class="desc1 texto">Data:</p>
-                                 <input class="dt-conf" type="date" value={consulta} onChange={e => setConsulta(e.target.value)}  />                        
+                                 <input class="dt-conf data-config" type="date" value={consulta} onChange={e => setConsulta(e.target.value)}  />                        
                              </div>
 
-                     <div class="caixas1">
+                     <div class="caixa1">
                          <div class="fileira1">
-                                 <div class="caixa1">
+                                 <div class="caixa1 cx-margem">
                                      <p class="desc4 texto">Horário:</p>
                                      <input class="hora" type="text" value={horario} onChange={e => setHorario(e.target.value)} /> 
                                  </div>
