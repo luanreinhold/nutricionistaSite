@@ -44,7 +44,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Roboto', sans-serif;
         height: 2em;
         width: 5em;
         border-radius: 1em;
@@ -85,7 +84,7 @@
     .f1-texto > p {
         font-family: 'Roboto', sans-serif;
         font-size: 1.2em;
-        width: 28em;
+        width: 26em;
     }
     
     .f1-prosa {
@@ -221,7 +220,7 @@
         font-size: 1.5em;
         padding-top: 1em;
         margin-top: 2em;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
     
     .f4-linha {
@@ -359,6 +358,9 @@
         text-align: center;
         margin-top: 2em;
     }
+    .Nutricao{
+        color: #000;
+    }
 
 
 
@@ -384,6 +386,8 @@
     .subtitulo-home {
         font-family: 'Poppins', sans-serif;
         font-size: 22px;
+        color: #E89897;
+
     }
     
     .texto-home {

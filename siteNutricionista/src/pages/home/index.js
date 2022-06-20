@@ -90,7 +90,7 @@ export default function Index() {
 
         <div class="subsub-f6 flexboxrow jc-center">
             <div class="f6-texto sub1-f6 fb-column">
-                <h2 class="subtitulo-home">O que é Nutrição?</h2>
+                <h2 class="Nutricao">O que é Nutrição?</h2>
                 <p class="nutricao"> Nutrição é a ingestão de alimentos, tendo em conta as necessidades alimentares do corpo. </p>
                 <p class="nutricao">  Uma boa nutrição - uma dieta adequada e equilibrada combinada com atividade física regular - é a "pedra fundamental" de uma boa saúde. </p>
                 <p class="nutricao">  A má nutrição pode levar à redução da imunidade, aumento da suscetibilidade a doenças, prejudicando o desenvolvimento físico e mental e redução da productividade”. </p>
